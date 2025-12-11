@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="access\style.css" />
+    <title>Видеоотзывы</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20 09</a>
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <img class="burger__menu" src="access\img\menu.svg" alt="">
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="form">
+                <img src="access/img/search-loap.svg" alt="" />
+                <input type="text" placeholder="Найти в каталоге" />
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop">Интернет-магазин ⬈</a>
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <a href="">Каталог</a>
+            <a href="">Кровельные работы</a>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="" class="link_active">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb__content">
+            <a href="" class="breadcrumb__link">
+              <h6>Главная</h6>
+            </a>
+            <span>/</span>
+            <h6 class="breadcrumb__end">Отзывы</h6>
+          </div>
+        </div>
+      </div>
+      <section class="block__rewS">
+        <div class="container">
+          <h1><span>отзывы</span> о компании roofland</h1>
+          <div class="rew__content">
+            <div class="rew__content-top">
+              <div class="rew__top-btns">
+                <!-- Desktop buttons -->
+                <div class="tab-buttons">
+                  <button class="tab-button active" data-tab="video">
+                    Видеоотзывы
+                  </button>
+                  <button class="tab-button" data-tab="photo">
+                    Отзывы с Яндекс.Карт
+                  </button>
+                  <button class="tab-button" data-tab="google">
+                    Отзывы с Google карты
+                  </button>
+                </div>
+                <!-- Mobile select -->
+                <div class="custom-dropdown tab-select">
+                  <div class="dropdown-toggle">
+                    Видеоотзывы
+                    <span class="dropdown-arrow"></span>
+                  </div>
+                  <ul class="dropdown-menu">
+                    <li data-value="video" class="active">Видеоотзывы</li>
+                    <li data-value="photo">Отзывы с Яндекс.Карт</li>
+                    <li data-value="google">Отзывы с Google карты</li>
+                  </ul>
+                </div>
+              </div>
+              <a href="#feedback" class="btn feedback-btn desc-o"
+                ><img src="access/img/vector.svg" alt="" />Оставить отзыв</a
+              >
+            </div>
+            <div id="video" class="tab-content active">
+              <div class="rew__content-main">
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rew__content-bottom">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper rew__bottom-items">
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                    <div class="swiper-slide rew__bottom-item">
+                      <video src="" poster="access/img/component.png"></video>
+                    </div>
+                  </div>
+                  <ul class="pagination swiper-pagination"></ul>
+                </div>
+              </div>
+            </div>
+            <div id="photo" class="tab-content">
+              <div class="rew__content-main">
+                <div class="rew__content-item">
+                  <img src="access/img/image.png" alt="Фото отзыва" />
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">Отзыв с фото 1</h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rew__content-bottom"></div>
+            </div>
+            <div id="google" class="tab-content">
+              <div class="rew__content-main">
+                <div class="rew__content-item">
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="rew-stars">
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                        <img src="access/img/star.svg" alt="" />
+                      </div>
+                      <h5 class="rew__item-title">Отзыв с Google 1</h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rew__content-bottom"></div>
+            </div>
+            <div class="rew__btns-modal">
+              <button class="btn btn__calcul modal-v">Показать больше</button>
+              <a href="#feedback" class="btn feedback-btn modal-v">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none">
+                  <path
+                    d="M18 1.75C18 1.61221 17.8878 1.5 17.75 1.5H1.75C1.61221 1.5 1.5 1.61221 1.5 1.75V14.75C1.5 14.8878 1.61221 15 1.75 15H7.75C7.90433 15 8.05537 15.048 8.18164 15.1367L12 17.8184V15.75C12 15.3358 12.3358 15 12.75 15H17.75C17.8878 15 18 14.8878 18 14.75V1.75ZM12.75 10C13.1642 10 13.5 10.3358 13.5 10.75C13.5 11.1642 13.1642 11.5 12.75 11.5H4.75C4.33579 11.5 4 11.1642 4 10.75C4 10.3358 4.33579 10 4.75 10H12.75ZM14.75 5C15.1642 5 15.5 5.33579 15.5 5.75C15.5 6.16421 15.1642 6.5 14.75 6.5H4.75C4.33579 6.5 4 6.16421 4 5.75C4 5.33579 4.33579 5 4.75 5H14.75ZM19.5 14.75C19.5 15.7162 18.7162 16.5 17.75 16.5H13.5V19.2627C13.5 19.5426 13.3441 19.7997 13.0957 19.9287C12.8474 20.0577 12.5473 20.0378 12.3184 19.877L7.5127 16.5H1.75C0.783786 16.5 0 15.7162 0 14.75V1.75C0 0.783786 0.783786 0 1.75 0H17.75C18.7162 0 19.5 0.783786 19.5 1.75V14.75Z"
+                    fill="#4153E4"/></svg>Оставить отзыв</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback-banner" id="feedback">
+        <div class="feedback__image">
+          <div class="container">
+            <div class="feedback__content">
+              <div class="feedback__content-text">
+                <h2>Оставьте честный отзыв - ваше мнение важно для нас!</h2>
+                <p>
+                  Расскажите о вашем опыте использования нашей продукции.
+                  Поделитесь впечатлениями, отметьте достоинства или недостатки
+                  – это поможет другим сделать правильный выбор
+                </p>
+                <p>
+                  Мы ценим каждое мнение и стремимся стать лучше благодаря вашей
+                  обратной связи!
+                </p>
+                <img src="access/img/arr.svg" alt="" class="banner-arr" />
+              </div>
+              <form action="" method="post" class="block__form">
+                <div class="line__input">
+                  <div class="line__input-text">Ваше имя <span>*</span></div>
+                  <input
+                    type="text"
+                    class="input-line"
+                    placeholder="Введите имя"
+                    required
+                  />
+                </div>
+                <div class="line__input">
+                  <div class="line__input-text">Отзыв <span>*</span></div>
+                  <textarea
+                    id="review-text"
+                    class="input-line textarea-line"
+                    placeholder="Напишите отзыв"
+                    required
+                    maxlength="250"
+                  ></textarea>
+                  <span id="char-count">0/250</span>
+                </div>
+                <div class="line__input">
+                  <div class="line__input-text">
+                    Поставьте нам оценку <span>*</span>
+                  </div>
+                  <div class="rating">
+                    <input
+                      type="radio"
+                      id="star5"
+                      name="rating"
+                      value="5"/>
+                    <label for="star5" data-star="5" ></label>
+
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label for="star4" data-star="4"></label>
+
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label for="star3" data-star="3"></label>
+
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label for="star2" data-star="2"></label>
+
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label for="star1" data-star="1"></label>
+                  </div>
+                </div>
+                <div class="line__input">
+                  <label for="file-upload" class="file-label"><img src="access/img/сomp-pre.svg" alt="" /> Прикрепить файл</label>
+                  <input id="file-upload" type="file" class="input-file" />
+                </div>
+                <label class="form-control">
+                  <input type="checkbox" name="agree" checked required />
+                  <span
+                    >Я соглашаюсь с
+                    <a href="">условиями обработки персональных данных</a></span
+                  >
+                </label>
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"/>
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required/>
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"/>
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"/>
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link">г.Минск ул. Ваупшасова 22</a>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20 09</a>
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20 09</a>
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link">
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""/>zakaz@roofland.by</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div>С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div>По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script/index.js"></script>
+  </body>
+</html>
