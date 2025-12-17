@@ -321,6 +321,7 @@ header {
 }
 .header__search input {
   width: 0;
+  background: transparent;
 }
 .burger__but {
   display: none;
