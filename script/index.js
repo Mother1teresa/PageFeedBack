@@ -73,7 +73,6 @@ buttons.forEach((button) => {
 });
 showTab("video");
 
-
 const textarea = document.getElementById("review-text");
 const counter = document.getElementById("char-count");
 
@@ -91,13 +90,13 @@ const swiper = new Swiper(".mySwiper", {
       slidesPerView: "auto",
       slidesPerGroup: 2,
       spaceBetween: 22,
-      allowTouchMove: false, 
+      allowTouchMove: false,
     },
     1024: {
       slidesPerView: "auto",
       slidesPerGroup: 2,
       spaceBetween: 16,
-      allowTouchMove: false, 
+      allowTouchMove: false,
     },
     768: {
       slidesPerView: "auto",
@@ -198,7 +197,7 @@ const swiper = new Swiper(".mySwiper", {
         });
     },
     slideChange: function () {
-      const currentSlideIndex = this.activeIndex; 
+      const currentSlideIndex = this.activeIndex;
       const slidesPerGroup = this.params.slidesPerGroup;
 
       const currentPage = Math.floor(currentSlideIndex / slidesPerGroup) + 1;
@@ -217,125 +216,6 @@ const swiper = new Swiper(".mySwiper", {
     },
   },
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const form = document.querySelector(".block__form");
-//   const requiredFields = form
-//     ? form.querySelectorAll(
-//         "input[required]:not([name='rating']), textarea[required]"
-//       )
-//     : [];
-//   const rating = form ? form.querySelector(".rating") : null;
-//   const ratingInputs = rating
-//     ? rating.querySelectorAll("input[name='rating']")
-//     : [];
-
-//   function showError(field) {
-//     field.classList.add("input-error");
-//     field.style.borderColor = "#B41825";
-//   }
-
-//   function clearError(field) {
-//     field.classList.remove("input-error");
-//     field.style.borderColor = "";
-//   }
-
-//   requiredFields.forEach((field) => {
-//     field.addEventListener("blur", () => {
-//       if (field.value.trim() === "") showError(field);
-//       else clearError(field);
-//     });
-//     field.addEventListener("input", () => {
-//       if (field.value.trim() !== "") clearError(field);
-//     });
-//   });
-
-//   ratingInputs.forEach((radio) => {
-//     radio.addEventListener("change", () => {
-//       if (rating) rating.classList.remove("rating-error");
-//     });
-//   });
-
-//   if (form) {
-//     form.addEventListener("submit", function (e) {
-//       e.preventDefault();
-//       let valid = true;
-
-//       requiredFields.forEach((field) => {
-//         if (field.value.trim() === "") {
-//           showError(field);
-//           valid = false;
-//         } else {
-//           clearError(field);
-//         }
-//       });
-
-//       let ratingChecked = Array.from(ratingInputs).some((r) => r.checked);
-//       if (!ratingChecked && rating) {
-//         rating.classList.add("rating-error");
-//         valid = false;
-//       } else if (rating) {
-//         rating.classList.remove("rating-error");
-//       }
-
-//       if (valid) {
-//         form.submit();
-//       }
-//     });
-//   }
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const form = document.querySelector(".footer__form-content");
-//   const phoneInput = form.querySelector("#phone");
-
-//   if (!window.IMask) {
-//     console.error("IMask не подключён!");
-//     return;
-//   }
-//   let mask = IMask(phoneInput, {
-//     mask: "+{375} (00) 000-00-00",
-//     lazy: true,
-//     placeholderChar: "_",
-//   });
-
-//   function showError(field) {
-//     field.classList.add("input-error");
-//     field.style.borderColor = "#B41825";
-//   }
-
-//   function clearError(field) {
-//     field.classList.remove("input-error");
-//     field.style.borderColor = "";
-//   }
-
-//   form.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     let valid = true;
-
-//     const digits = mask.value.replace(/\D/g, "");
-
-//     if (digits.length < 12) {
-//       showError(phoneInput);
-//       valid = false;
-//     } else {
-//       clearError(phoneInput);
-//     }
-
-//     const checkbox = form.querySelector("input[type='checkbox']");
-//     if (!checkbox.checked) {
-//       checkbox.style.outline = "2px solid #B41825";
-//       valid = false;
-//     } else {
-//       checkbox.style.outline = "";
-//     }
-
-//     if (valid) {
-//       phoneInput.value = "+" + digits;
-//       form.submit();
-//     }
-//   });
-// });
 
 const form1 = document.querySelector(".block__form");
 
@@ -392,7 +272,6 @@ if (form1) {
   });
 }
 
-
 const form2 = document.querySelector(".footer__form-content");
 
 if (form2) {
@@ -443,3 +322,23 @@ document.querySelectorAll(".footer-accordion").forEach((acc) => {
     acc.classList.toggle("active");
   });
 });
+
+const burgerBut = document.querySelector("#burger__but");
+const body = document.body;
+
+burgerBut.addEventListener("click", () => {
+  if (burgerBut.classList.contains("burger__but__active")) {
+    body.style.overflowY = "";
+    burgerBut.classList.remove("burger__but__active");
+
+    const headerMenu = document.querySelector(".header__menu__active");
+    headerMenu.classList.remove("header__menu__active");
+  } else {
+    body.style.overflowY = "hidden";
+    burgerBut.classList.add("burger__but__active");
+
+    const headerMenu = document.querySelector("#header__menu");
+    headerMenu.classList.add("header__menu__active");
+  }
+});
+
