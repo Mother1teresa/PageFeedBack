@@ -233,7 +233,7 @@ header {
 
 .header__content-ceo {
   display: flex;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .header__content-ceo img {
@@ -254,7 +254,7 @@ header {
 
 .header-right__btns {
   display: flex;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .header__bottom {
@@ -269,8 +269,8 @@ header {
   height: 0px;
   width: 100%;
   position: fixed;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   transition: all 0.5s;
 }
 
@@ -343,7 +343,7 @@ header {
 }
 .header__search:hover > input {
   width: 17rem;
-  padding-left: 4px;
+  padding-left: 0.25rem;
   background-color: transparent;
 }
 .header__content:has(.header__search:hover) .header__content-ceo {
@@ -392,7 +392,7 @@ header {
     display: block;
     width: 100%;
     height: 0.188rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background: var(--blue);
   }
 
@@ -453,7 +453,7 @@ header {
   .header__search {
     width: 100%;
     display: flex;
-    gap: 4px;
+    gap: 0.25rem;
   }
   .header__search input {
     display: block;
@@ -468,7 +468,7 @@ header {
 
 .breadcrumb__content {
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .breadcrumb__link h6 {
@@ -567,7 +567,7 @@ header {
 
 .rew-stars {
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .rew-stars img {
@@ -593,7 +593,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   background: var(--cerulean);
   color: var(--blue);
   padding: 1rem 1.5rem;
@@ -702,7 +702,7 @@ header {
   border-radius: 0.625rem;
   border: 1px solid var(--input-border);
   background: var(--white-color);
-  margin-top: 3px;
+  margin-top: 0.188rem;
   width: 100%;
 }
 .input-line:focus,
@@ -880,7 +880,7 @@ footer {
 }
 .form__checkbox-text {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   font-size: 0.688rem;
   font-weight: 400;
 }
@@ -891,7 +891,7 @@ footer {
 .form__input-checkbox {
   width: 1.25rem;
   height: 1.25rem;
-  border-radius: 4px;
+  border-radius: .25rem;
 }
 .form__checkbox-text a {
   color: var(--blue);
@@ -907,7 +907,7 @@ footer {
 .footer__form-tests {
   font-size: 0.875rem;
   display: grid;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .chevron-title {
   display: none;
@@ -963,7 +963,7 @@ footer {
   }
 
   .footer__row-title.active + .footer__row-links {
-    max-height: 500px;
+    max-height: 31.25rem;
   }
 
   .footer__row-title.active .chevron-title {
@@ -988,7 +988,7 @@ footer {
   }
 
   .footer-accordion.active .footer__row-links {
-    max-height: 500px;
+    max-height: 31.25rem;
   }
 
   .footer-accordion.active .chevron-title {
@@ -998,7 +998,7 @@ footer {
 
 .header__block-tel {
   display: grid;
-  gap: 6px;
+  gap: 0.375rem;
   width: fit-content;
 }
 
@@ -1014,7 +1014,7 @@ footer {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .dropbtn .chevron-title {
   display: flex;
@@ -1040,7 +1040,7 @@ footer {
   font-size: 1rem;
   font-weight: 500;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
 }
 .dropdown-content p {
   font-size: 0.875rem;
@@ -1053,7 +1053,7 @@ footer {
 
 .dropdown__line {
   display: grid;
-  gap: 8px;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 .dropdown__line img {
@@ -1062,14 +1062,14 @@ footer {
 }
 .dropdown__line2 {
   display: grid;
-  gap: 6px;
+  gap: 0.375rem;
   margin-top: 1rem;
 }
 .dropdown__line2 .footer__links-adr,
 .dropdown__line .footer__links-adr {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0.25rem;
 }
 .dropdown__line2 img {
   width: 1.5rem;
@@ -1103,7 +1103,7 @@ footer {
   justify-content: flex-start;
   border: 1px solid var(--blue);
   border-radius: 1rem;
-  padding: 4px;
+  padding: 0.25rem;
 }
 
 .tab-button {
@@ -1245,7 +1245,7 @@ footer {
     right: -2.938rem;
   }
   .header__block-tel {
-    gap: 4px;
+    gap: 0.25rem;
   }
 }
 
@@ -1262,7 +1262,7 @@ footer {
   padding: 0.5rem 0.906rem;
   text-decoration: none;
   color: black;
-  margin-left: 4px;
+  margin-left: 0.25rem;
   border-radius: 0.5rem;
   transition: background-color 1s;
   font-size: 0.875rem;
@@ -1310,7 +1310,7 @@ footer {
 
 .rating-error {
   background-color: var(--rating-error) !important;
-  padding: 8px;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 .input-error {
@@ -1399,7 +1399,7 @@ footer {
 .file-label {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   color: var(--blue);
   cursor: pointer;
   font-size: 0.875rem;
@@ -1443,10 +1443,6 @@ footer {
   }
 }
 
-.roof-pad {
-  padding-left: 108px;
-  padding-right: 108px;
-}
 .price-list__content-wrap {
   max-width: 34.375rem;
   width: 50%;
@@ -1618,13 +1614,13 @@ footer {
 .menu-dropdown__toggle {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 0.25rem;
   cursor: pointer;
 }
 
 .menu-dropdown__toggle img {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   transition: transform 0.3s ease;
 }
 
@@ -1642,7 +1638,7 @@ footer {
   flex-direction: column;
   z-index: 50;
   white-space: nowrap;
-overflow: hidden;
+  overflow: hidden;
 }
 
 .menu-dropdown.is-open .menu-dropdown__popup {
@@ -1667,7 +1663,7 @@ overflow: hidden;
   background: var(--cerulean);
   border-radius: 1rem;
   padding: 1rem;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   width: 100%;
 }
 .project-list-filter__fields .project-list-filter__select {
@@ -1710,6 +1706,8 @@ overflow: hidden;
   border: 1px solid var(--border-tab);
   border-radius: 1rem;
   padding: 0;
+  width: 100%;
+  top: 2.65rem;
 }
 .project-list-filter__select .menu-dropdown__popup a {
   padding: 0.875rem 1.25rem;
@@ -1746,7 +1744,7 @@ overflow: hidden;
 .project-list-filter__select {
   flex: 1 1 0;
   width: 18.75rem;
-  padding: 0.5rem 0.875rem;
+  padding: 0.738rem 0.625rem;
   border-radius: 0.5rem;
   border: 1px solid var(--input-border);
   background: var(--cerulean);
@@ -1756,8 +1754,8 @@ overflow: hidden;
   appearance: none;
   background-image: url(img/chevron-small.svg);
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 20px;
+  background-position: right 0.625rem center;
+  background-size: 1.25rem;
 }
 
 .project-list-filter__select:focus-within {
@@ -1919,9 +1917,6 @@ overflow: hidden;
     justify-content: stretch;
     gap: 0;
   }
-  .project-list-filter__fields .project-list-filter__select {
-    width: 100%;
-  }
   .pagination li .link-back,
   .pagination li .link-next {
     padding: 0;
@@ -1989,7 +1984,7 @@ overflow: hidden;
     top: 2.65rem;
     width: 100%;
   }
-  .blog__content-item img{
+  .blog__content-item img {
     height: 11.25rem;
     object-fit: fill;
   }
