@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="access\style.css" />
+    <title>Видеоотзывы</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+          <div class="container">
+            <div class="header__content">
+              <a href="">Каталог</a>
+              <a href="">Кровельные работы</a>
+              <a href="">Портфолио</a>
+              <a href="">О компании</a>
+              <a href="" class="link_active">Отзывы</a>
+              <a href="">Оплата</a>
+              <a href="">Доставка и возврат</a>
+              <a href="">Контакты</a>
+              <a href="">Блог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Пункт 2</a>
+                <a href="#">Пункт 3</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Пункт 1</a>
+                <a href="#">Пункт 2</a>
+                <a href="#">Пункт 3</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="" class="link_active">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb__content">
+            <a href="" class="breadcrumb__link">
+              <h6>Главная</h6>
+            </a>
+            <span>/</span>
+            <h6 class="breadcrumb__end">Блог</h6>
+          </div>
+        </div>
+      </div>
+      <section class="block__rewS block__blog">
+        <div class="container">
+          <h1><span>блог</span> компании roofland</h1>
+          <div class="rew__content">
+            <div class="rew__content-top blog-grid">
+              <div class="rew__top-btns">
+                <!-- Desktop buttons -->
+                <div class="tab-buttons">
+                  <button class="tab-button active" data-tab="video-blog">
+                    Видеоблог
+                  </button>
+                  <button class="tab-button" data-tab="articles">Статьи</button>
+                </div>
+                <!-- Mobile select -->
+                <div class="custom-dropdown tab-select">
+                  <div class="dropdown-toggle">
+                    Видеоблог
+                    <span class="dropdown-arrow"></span>
+                  </div>
+                  <ul class="dropdown-menu">
+                    <li data-value="video-blog" class="active">Видеоблог</li>
+                    <li data-value="articles">Статьи</li>
+                  </ul>
+                </div>
+              </div>
+              <form class="project-list-filter project-list-filter__form">
+                
+                  <div class="project-list-filter__fields">
+                    <div class="blog-search project-list-filter__select">
+                      <input type="text" placeholder="Введите название">
+                      <button class="but__search">
+                        <img src="access/img/search-loap.svg" alt="" />
+                      </button>
+                    </div>
+                    <li class="menu-dropdown project-list-filter__select">
+                      <a class="menu-dropdown__toggle">Выберите категорию
+                        <img src="access/img/chevron-small.svg" alt="icon" />
+                      </a>
+                      <div class="menu-dropdown__popup">
+                        <a href="#">Пункт 1</a>
+                        <a href="#">Пункт 2</a>
+                        <a href="#">Пункт 3</a>
+                      </div>
+                    </li>
+                  </div>
+
+                  <button type="reset" class="project-list-filter__reset">
+                    Сбросить
+                  </button>
+                
+              </form>
+            </div>
+            <div id="video-blog" class="tab-content active">
+              <div class="rew__content-main">
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+                <div class="rew__content-item">
+                  <video src="" poster="access/img/image.png"></video>
+                  <div class="rew__item-content">
+                    <div class="rew__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h5 class="rew__item-title">
+                        Оригинальный отзыв заказчика. Смотреть до конца.
+                        Оригинальный отзыв заказчика. Смотреть до конца
+                      </h5>
+                    </div>
+                    <div class="rew-data">03.08.2022</div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination">
+                <li>
+                  <a href="#" class="link-back disabled">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        d="M14 9L10 13L14 17"
+                        stroke="#ECECEC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a class="" href="#">2</a></li>
+                <li><a class="" href="#">3</a></li>
+                <li><a class="" href="#">4</a></li>
+                <li><span class="dots">...</span></li>
+                <li><a href="#">6</a></li>
+                <li>
+                  <a href="#" class="link-next">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                    >
+                      <path
+                        d="M10 9L14 13L10 17"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="articles" class="tab-content">
+              <div class="rew__content-main">
+                <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h3 class="blog__item-title">Акция апрель-май на ограждения</h3>
+                      <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                </div>
+                <div class="blog__content-items-2">
+                  <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        НОВИНКИ
+                      </div>
+                      <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                      <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                </div>
+                <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        ОБЗОР
+                      </div>
+                      <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                      <div class="blog__item-text">
+                        <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                        <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                      </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                </div>
+                </div>
+                <div class="blog__content-items-3">
+                  <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                      <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                  </div>
+                  <div class="blog__content-item">
+                    <img src="access/img/blog-foto.png" alt="blog-prom" />
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-promotion">
+                          акция
+                        </div>
+                        <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                        <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                        
+                      </div>
+                      <div class="blog-data">24.10.2023</div>
+                    </div>
+                  </div>
+                  <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                      <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                  </div>
+                </div>
+                <div class="blog__content-items-3">
+                  <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                      <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                  </div>
+                  <div class="blog__content-item">
+                    <img src="access/img/blog-foto.png" alt="blog-prom" />
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-promotion">
+                          акция
+                        </div>
+                        <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                        <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                        
+                      </div>
+                      <div class="blog-data">24.10.2023</div>
+                    </div>
+                  </div>
+                  <div class="blog__content-item">
+                  <img src="access/img/blog-foto.png" alt="blog-prom" />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                      </div>
+                      <h4 class="blog__item-title">Акция апрель-май на ограждения</h4>
+                      <div class="blog__item-text">
+                          <p>Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех доступных цветах и покрытиях!</p>
+                          <p>АКЦИЯ действует с 24.04.2023 до 31.05.2024 включительно</p>
+                        </div>
+                    </div>
+                    <div class="blog-data">24.10.2023</div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination">
+                <li>
+                  <a href="#" class="link-back disabled">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M14 9L10 13L14 17" stroke="#ECECEC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li><a class="active" href="#">1</a></li>
+                <li><a class="" href="#">2</a></li>
+                <li><a class="" href="#">3</a></li>
+                <li><a class="" href="#">4</a></li>
+                <li><span class="dots">...</span></li>
+                <li><a href="#">6</a></li>
+                <li>
+                  <a href="#" class="link-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                      <path d="M10 9L14 13L10 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="price-list roof-pad">
+        <div class="container">
+          <div class="price-list__content">
+            <div class="price-list__content-wrap">
+              <h2 class="price-list__title">Прайс-лист на материалы</h2>
+              <p>
+                Не тратьте время на долгие поиски. Скачайте прайс с описанием и
+                актуальными ценами
+              </p>
+            </div>
+            <div class="price-form-wrapper">
+              <form
+                class="price-form"
+                action="#"
+                method="POST"
+                autocomplete="off"
+                novalidate=""
+              >
+                <h3 class="price-form__title">Куда отправить прайс-лист?</h3>
+
+                <div class="price-form__radios">
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="telegram"
+                      required=""
+                      checked=""
+                    />
+                    <span>Telegram</span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="viber"
+                      required=""
+                    />
+                    <span>Viber</span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="email"
+                      required=""
+                    />
+                    <span>E-mail</span>
+                  </label>
+                </div>
+
+                <label class="price-form__label" for="phone"
+                  >Введите номер телефона</label
+                >
+
+                <input
+                  class="price-form__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  pattern="^[0-9+\-\s()]{6,20}$"
+                  required=""
+                />
+                <label class="form-control contact-form__checkbox">
+                  <input type="checkbox" name="agree" checked required />
+                  <span
+                    >Я соглашаюсь с
+                    <a href="">условиями обработки персональных данных</a></span
+                  >
+                </label>
+
+                <button class="btn btn__calcul" type="submit">
+                  Получить прайс
+                </button>
+
+                <div class="price-form__update">Прайс обновлен 20.04.2025</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img  src="access/img/chevron-small.svg" alt="" class="chevron-title"/>
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/index.js"></script>
+  </body>
+</html>

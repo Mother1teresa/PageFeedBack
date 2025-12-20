@@ -1,289 +1,213 @@
-function toggleDropdown(button) {
-  var dropdown = button.parentElement;
-  dropdown.classList.toggle("active");
-  document.addEventListener("click", function closeDropdown(event) {
-    if (!dropdown.contains(event.target)) {
-      dropdown.classList.remove("active");
-      document.removeEventListener("click", closeDropdown);
-    }
-  });
-}
-const buttons = document.querySelectorAll(".tab-button");
-const dropdownToggle = document.querySelector(".dropdown-toggle");
-const dropdownMenu = document.querySelector(".dropdown-menu");
-const customDropdown = document.querySelector(".custom-dropdown");
-const contents = document.querySelectorAll(".tab-content");
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdowns = document.querySelectorAll(".menu-dropdown");
 
-function showTab(tabId) {
-  buttons.forEach((button) => button.classList.remove("active"));
-  contents.forEach((content) => content.classList.remove("active"));
+  dropdowns.forEach((drop) => {
+    const toggle = drop.querySelector(".menu-dropdown__toggle");
+    if (!toggle) return;
 
-  const activeButton = document.querySelector(
-    `.tab-button[data-tab="${tabId}"]`
-  );
-  if (activeButton) activeButton.classList.add("active");
-  const activeContent = document.getElementById(tabId);
-  if (activeContent) activeContent.classList.add("active");
-  if (dropdownToggle) {
-    const selectedOption = dropdownMenu.querySelector(
-      `li[data-value="${tabId}"]`
-    );
-    if (selectedOption) {
-      dropdownToggle.innerHTML = `${selectedOption.textContent}<span class="dropdown-arrow"></span>`;
-      dropdownMenu
-        .querySelectorAll("li")
-        .forEach((li) => li.classList.remove("active"));
-      selectedOption.classList.add("active");
-    }
-  }
-}
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-if (dropdownToggle) {
-  dropdownToggle.addEventListener("click", () => {
-    customDropdown.classList.toggle("open");
-    dropdownMenu.style.display = customDropdown.classList.contains("open")
-      ? "block"
-      : "none";
-  });
-}
+      // закрыть все остальные
+      dropdowns.forEach((d) => {
+        if (d !== drop) d.classList.remove("is-open");
+      });
 
-if (dropdownMenu) {
-  dropdownMenu.addEventListener("click", (e) => {
-    if (e.target.tagName === "LI") {
-      const tabId = e.target.getAttribute("data-value");
-      showTab(tabId);
-      customDropdown.classList.remove("open");
-      dropdownMenu.style.display = "none";
-    }
-  });
-}
+      drop.classList.toggle("is-open");
+    });
 
-document.addEventListener("click", (e) => {
-  if (!customDropdown.contains(e.target)) {
-    customDropdown.classList.remove("open");
-    dropdownMenu.style.display = "none";
-  }
-});
+    // если это select
+    if (drop.classList.contains("project-list-filter__select")) {
+      const popup = drop.querySelector(".menu-dropdown__popup");
+      if (!popup) return;
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const tabId = button.getAttribute("data-tab");
-    showTab(tabId);
-  });
-});
-showTab("video");
+      popup.querySelectorAll("a").forEach((option) => {
+        option.addEventListener("click", (e) => {
+          e.preventDefault();
 
-const textarea = document.getElementById("review-text");
-const counter = document.getElementById("char-count");
+          // смена текста
+          toggle.childNodes[0].textContent = option.textContent.trim();
 
-textarea.addEventListener("input", () => {
-  counter.textContent = `${textarea.value.length}/250`;
-});
+          // активный пункт
+          popup
+            .querySelectorAll("a")
+            .forEach((a) => a.classList.remove("active"));
+          option.classList.add("active");
 
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  slidesPerGroup: 2,
-  spaceBetween: 22,
-  allowTouchMove: true,
-  breakpoints: {
-    1440: {
-      slidesPerView: "auto",
-      slidesPerGroup: 2,
-      spaceBetween: 22,
-      allowTouchMove: false,
-    },
-    1024: {
-      slidesPerView: "auto",
-      slidesPerGroup: 2,
-      spaceBetween: 16,
-      allowTouchMove: false,
-    },
-    768: {
-      slidesPerView: "auto",
-      slidesPerGroup: 2,
-      allowTouchMove: true,
-    },
-    0: {
-      slidesPerView: "auto",
-      slidesPerGroup: 1,
-      allowTouchMove: true,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "custom",
-    clickable: true,
-    renderCustom: function (swiper, current, total) {
-      let html = "";
-      const isFirst = current === 1;
-      const leftColor = isFirst ? "#ECECEC" : "black";
+          // помечаем селект как выбранный
+          drop.classList.add("has-value");
+          drop.dataset.value = option.textContent.trim();
 
-      html += `
-    <li>
-      <a href="#" class="link-back ${isFirst ? "disabled" : ""}">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-          <path d="M14 9L10 13L14 17" stroke="${leftColor}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-  `;
-      const maxVisible = 4;
-
-      let start = current - Math.floor(maxVisible / 2);
-      let end = current + Math.floor(maxVisible / 2);
-
-      if (start < 1) {
-        start = 1;
-        end = maxVisible;
-      }
-      if (end > total) {
-        end = total;
-        start = total - maxVisible + 1;
-        if (start < 1) start = 1;
-      }
-
-      if (start > 1) {
-        html += `<li><a href="#">1</a></li>`;
-        if (start > 2) html += `<li><span class="dots">...</span></li>`;
-      }
-      for (let i = start; i <= end; i++) {
-        const activeClass = i === current ? "active" : "";
-        html += `<li><a class="${activeClass}" href="#">${i}</a></li>`;
-      }
-
-      if (end < total) {
-        if (end < total - 1) html += `<li><span class="dots">...</span></li>`;
-        html += `<li><a href="#">${total}</a></li>`;
-      }
-
-      const isLast = current === total;
-      const rightColor = isLast ? "#ECECEC" : "black";
-
-      html += `
-    <li>
-      <a href="#" class="link-next ${isLast ? "disabled" : ""}">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-          <path d="M10 9L14 13L10 17" stroke="${rightColor}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </li>
-  `;
-
-      return html;
-    },
-  },
-  on: {
-    init: function () {
-      this.el
-        .querySelector(".swiper-pagination")
-        .addEventListener("click", (e) => {
-          if (e.target.closest("a")) {
-            e.preventDefault();
-            const target = e.target.closest("a");
-            if (target.classList.contains("link-back")) {
-              this.slidePrev();
-            } else if (target.classList.contains("link-next")) {
-              this.slideNext();
-            } else if (
-              target.tagName === "A" &&
-              /^\d+$/.test(target.textContent)
-            ) {
-              const page = parseInt(target.textContent, 10);
-              if (!isNaN(page)) {
-                this.slideTo((page - 1) * this.params.slidesPerGroup);
-              }
-            }
-          }
+          drop.classList.remove("is-open");
         });
-    },
-    slideChange: function () {
-      const currentSlideIndex = this.activeIndex;
-      const slidesPerGroup = this.params.slidesPerGroup;
+      });
+    }
+  });
 
-      const currentPage = Math.floor(currentSlideIndex / slidesPerGroup) + 1;
+  // закрытие по клику вне
+  document.addEventListener("click", () => {
+    dropdowns.forEach((d) => d.classList.remove("is-open"));
+  });
 
-      const links = this.el.querySelectorAll(
-        ".swiper-pagination li a:not(.link-back):not(.link-next)"
-      );
-
-      links.forEach((link) => link.classList.remove("active"));
-
-      const activeLink = Array.from(links).find(
-        (link) => parseInt(link.textContent, 10) === currentPage
-      );
-
-      if (activeLink) activeLink.classList.add("active");
-    },
-  },
+  // закрытие по Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      dropdowns.forEach((d) => d.classList.remove("is-open"));
+    }
+  });
 });
 
-const form1 = document.querySelector(".block__form");
+document.addEventListener("DOMContentLoaded", () => {
+  /* ================= TABS ================= */
 
-if (form1) {
-  const requiredFields = form1.querySelectorAll(
-    "input[required]:not([name='rating']), textarea[required]"
-  );
-  const rating = form1.querySelector(".rating");
-  const ratingInputs = rating
-    ? rating.querySelectorAll("input[name='rating']")
-    : [];
+  const buttons = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+  const customDropdown = document.querySelector(".custom-dropdown");
 
-  function showError(field) {
-    field.classList.add("input-error");
-    field.style.borderColor = "#B41825";
+  function showTab(tabId) {
+    buttons.forEach((b) => b.classList.remove("active"));
+    contents.forEach((c) => c.classList.remove("active"));
+
+    const activeButton = document.querySelector(
+      `.tab-button[data-tab="${tabId}"]`
+    );
+    const activeContent = document.getElementById(tabId);
+
+    if (activeButton) activeButton.classList.add("active");
+    if (activeContent) activeContent.classList.add("active");
+
+    // dropdown sync
+    if (dropdownToggle && dropdownMenu) {
+      const selected = dropdownMenu.querySelector(`li[data-value="${tabId}"]`);
+      if (selected) {
+        dropdownToggle.innerHTML = `${selected.textContent}
+          <span class="dropdown-arrow"></span>`;
+        dropdownMenu
+          .querySelectorAll("li")
+          .forEach((li) => li.classList.remove("active"));
+        selected.classList.add("active");
+      }
+    }
   }
 
-  function clearError(field) {
-    field.classList.remove("input-error");
-    field.style.borderColor = "";
+  // клики по кнопкам
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      showTab(button.dataset.tab);
+    });
+  });
+
+  // 🔴 ВАЖНО: показываем первый таб автоматически
+  if (buttons.length > 0) {
+    showTab(buttons[0].dataset.tab);
   }
 
-  requiredFields.forEach((field) => {
-    field.addEventListener("blur", () =>
-      field.value.trim() === "" ? showError(field) : clearError(field)
-    );
-    field.addEventListener("input", () => clearError(field));
-  });
+  /* ================= DROPDOWN TABS ================= */
 
-  ratingInputs.forEach((radio) => {
-    radio.addEventListener("change", () =>
-      rating.classList.remove("rating-error")
-    );
-  });
+  if (dropdownToggle && dropdownMenu && customDropdown) {
+    dropdownToggle.addEventListener("click", () => {
+      customDropdown.classList.toggle("open");
+      dropdownMenu.style.display = customDropdown.classList.contains("open")
+        ? "block"
+        : "none";
+    });
 
-  form1.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let valid = true;
-
-    requiredFields.forEach((field) => {
-      if (field.value.trim() === "") {
-        showError(field);
-        valid = false;
+    dropdownMenu.addEventListener("click", (e) => {
+      if (e.target.tagName === "LI") {
+        showTab(e.target.dataset.value);
+        customDropdown.classList.remove("open");
+        dropdownMenu.style.display = "none";
       }
     });
 
-    let ratingChecked = [...ratingInputs].some((r) => r.checked);
-    if (!ratingChecked) {
-      rating.classList.add("rating-error");
-      valid = false;
-    }
+    document.addEventListener("click", (e) => {
+      if (!customDropdown.contains(e.target)) {
+        customDropdown.classList.remove("open");
+        dropdownMenu.style.display = "none";
+      }
+    });
+  }
 
-    if (valid) form1.submit();
-  });
-}
+  /* ================= TEXTAREA COUNTER ================= */
 
-const form2 = document.querySelector(".footer__form-content");
+  const textarea = document.getElementById("review-text");
+  const counter = document.getElementById("char-count");
 
-if (form2) {
-  const phoneInput = form2.querySelector("#phone");
+  if (textarea && counter) {
+    textarea.addEventListener("input", () => {
+      counter.textContent = `${textarea.value.length}` / 250;
+    });
+  }
 
-  if (!window.IMask) {
-    console.error("IMask не подключён!");
-  } else {
+  /* ================= FORM 1 ================= */
+
+  const form1 = document.querySelector(".block__form");
+
+  if (form1) {
+    const requiredFields = form1.querySelectorAll(
+      "input[required]:not([name='rating']), textarea[required]"
+    );
+    const rating = form1.querySelector(".rating");
+    const ratingInputs = rating
+      ? rating.querySelectorAll("input[name='rating']")
+      : [];
+
+    const showError = (field) => {
+      field.classList.add("input-error");
+      field.style.borderColor = "#B41825";
+    };
+
+    const clearError = (field) => {
+      field.classList.remove("input-error");
+      field.style.borderColor = "";
+    };
+
+    requiredFields.forEach((field) => {
+      field.addEventListener("blur", () =>
+        field.value.trim() === "" ? showError(field) : clearError(field)
+      );
+      field.addEventListener("input", () => clearError(field));
+    });
+
+    ratingInputs.forEach((radio) => {
+      radio.addEventListener("change", () =>
+        rating.classList.remove("rating-error")
+      );
+    });
+
+    form1.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+
+      requiredFields.forEach((field) => {
+        if (field.value.trim() === "") {
+          showError(field);
+          valid = false;
+        }
+      });
+
+      if (![...ratingInputs].some((r) => r.checked)) {
+        rating.classList.add("rating-error");
+        valid = false;
+      }
+
+      if (valid) form1.submit();
+    });
+  }
+
+  /* ================= FORM 2 ================= */
+
+  const form2 = document.querySelector(".footer__form-content");
+
+  if (form2 && window.IMask) {
+    const phoneInput = form2.querySelector("#phone");
+    if (!phoneInput) return;
+
     const phoneMask = IMask(phoneInput, {
       mask: "+{375} (00) 000-00-00",
-      lazy: true,
-      placeholderChar: "_",
     });
 
     form2.addEventListener("submit", (e) => {
@@ -291,7 +215,6 @@ if (form2) {
       let valid = true;
 
       const digits = phoneMask.value.replace(/\D/g, "");
-
       if (digits.length < 12) {
         phoneInput.classList.add("input-error");
         valid = false;
@@ -300,12 +223,10 @@ if (form2) {
       }
 
       const checkbox = form2.querySelector("input[type='checkbox']");
-      if (!checkbox.checked) {
+      if (!checkbox?.checked) {
         checkbox.style.outline = "2px solid #B41825";
         valid = false;
-      } else {
-        checkbox.style.outline = "";
-      }
+      } else checkbox.style.outline = "";
 
       if (valid) {
         phoneInput.value = "+" + digits;
@@ -313,32 +234,45 @@ if (form2) {
       }
     });
   }
-}
 
-document.querySelectorAll(".footer-accordion").forEach((acc) => {
-  const title = acc.querySelector(".footer__row-title");
+  /* ================= FOOTER ACCORDION ================= */
 
-  title.addEventListener("click", () => {
-    acc.classList.toggle("active");
+  document.querySelectorAll(".footer-accordion").forEach((acc) => {
+    const title = acc.querySelector(".footer__row-title");
+    if (!title) return;
+    title.addEventListener("click", () => acc.classList.toggle("active"));
   });
-});
 
-const burgerBut = document.querySelector("#burger__but");
-const body = document.body;
+  /* ================= BURGER ================= */
 
-burgerBut.addEventListener("click", () => {
-  if (burgerBut.classList.contains("burger__but__active")) {
-    body.style.overflowY = "";
-    burgerBut.classList.remove("burger__but__active");
+  const burgerBut = document.querySelector("#burger__but");
+  const body = document.body;
+  const headerMenu = document.querySelector("#header__menu");
 
-    const headerMenu = document.querySelector(".header__menu__active");
-    headerMenu.classList.remove("header__menu__active");
-  } else {
-    body.style.overflowY = "hidden";
-    burgerBut.classList.add("burger__but__active");
+  if (burgerBut && headerMenu) {
+    burgerBut.addEventListener("click", () => {
+      burgerBut.classList.toggle("burger__but__active");
+      headerMenu.classList.toggle("header__menu__active");
+      body.style.overflowY = burgerBut.classList.contains("burger__but__active")
+        ? "hidden"
+        : "";
+    });
+  }
 
-    const headerMenu = document.querySelector("#header__menu");
-    headerMenu.classList.add("header__menu__active");
+  /* ================= SWIPER ================= */
+
+  if (document.querySelector(".mySwiper")) {
+    new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      slidesPerGroup: 2,
+      spaceBetween: 22,
+      allowTouchMove: true,
+      breakpoints: {
+        1440: { allowTouchMove: false },
+        1024: { spaceBetween: 16, allowTouchMove: false },
+        768: { allowTouchMove: true },
+        0: { slidesPerGroup: 1 },
+      },
+    });
   }
 });
-
