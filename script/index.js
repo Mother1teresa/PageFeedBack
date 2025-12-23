@@ -138,7 +138,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (textarea && counter) {
     textarea.addEventListener("input", () => {
-      counter.textContent = `${textarea.value.length}` / 250;
+      counter.textContent = `${textarea.value.length} / 250`;
+    });
+  }
+
+  const AccomTextarea = document.getElementById("accom-text");
+  const AccomCounter = document.getElementById("char-count");
+
+  if (AccomTextarea && AccomCounter) {
+    AccomTextarea.addEventListener("input", () => {
+      AccomCounter.textContent = `${AccomTextarea.value.length} / 2500`;
     });
   }
 
@@ -275,4 +284,55 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   }
+  if (document.querySelector(".vacan-swiper")) {
+    new Swiper(".vacan-swiper", {
+      slidesPerView: 3.1,
+      // slidesPerGroup: 2,
+      spaceBetween: 24,
+      allowTouchMove: true,
+      breakpoints: {
+        1440: { allowTouchMove: true },
+        1024: { spaceBetween: 16, allowTouchMove: true },
+        768: { allowTouchMove: false },
+        0: { slidesPerGroup: 1 },
+      },
+      navigation: {
+        nextEl: ".vacan-swiper .swiper-button-next",
+        prevEl: ".vacan-swiper .swiper-button-prev",
+      },
+    });
+  }
+
+  const modalButtons = document.querySelectorAll("[data-modal]");
+  const modals = document.querySelectorAll(".modal");
+
+  modalButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.dataset.modal;
+      const modal = document.getElementById(modalId);
+
+      if (!modal) return;
+
+      modal.classList.add("active");
+      document.body.classList.add("no-scroll");
+    });
+  });
+
+  // закрытие по overlay и кнопке
+  modals.forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+      if (e.target.hasAttribute("data-close")) {
+        modal.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+      }
+    });
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      document.querySelectorAll(".modal.active").forEach((modal) => {
+        modal.classList.remove("active");
+      });
+      document.body.classList.remove("no-scroll");
+    }
+  });
 });
