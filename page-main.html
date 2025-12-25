@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="access\style.css" />
+    <title>Главная Страница</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+          <div class="container">
+            <div class="header__content">
+              <a href="">Каталог</a>
+              <a href="">Кровельные работы</a>
+              <a href="">Портфолио</a>
+              <a href="">О компании</a>
+              <a href="" class="link_active">Отзывы</a>
+              <a href="">Оплата</a>
+              <a href="">Доставка и возврат</a>
+              <a href="">Контакты</a>
+              <a href="">Блог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Материалы для фасада</a>
+                <a href="#">Заборы и ограждения</a>
+                <a href="#">Кровельные аксессуары</a>
+                <a href="#">Водосточные системы</a>
+                <a href="#">Услуги монтажа</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Монтаж кровли под ключ</a>
+                <a href="#">Реконструкция домов и дач</a>
+                <a href="#">Монтаж кровли из металлочерепицы</a>
+                <a href="#">Монтаж натуральной черепицы</a>
+                <a href="#">Монтаж фальцевой кровли</a>
+                <a href="#">Установка водосточной системы</a>
+                <a href="#">Установка мансардных окон</a>
+                <a href="#">Установка снегодержателей</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <a href="#top" class="block__up">
+            <img src="access/img/arr-bl.svg" alt="">
+        </a>
+        <div class="block__layout">
+            <a href="" class="block__link">
+                <img src="access/img/shop-svg.svg" alt="">
+                <div class="block__link-number">1</div>
+            </a>
+            <a href="tel:+375296282009" class="modal-v">
+                <img src="access/img/tel-icon.svg" alt="" class="img-seo">
+            </a>
+            <a href="" class="desc-o">
+                <img src="access/img/wb.svg" alt="" class="img-seo">
+            </a>
+            <a href="" class="desc-o">
+                <img src="access/img/Logo.svg" alt="" class="img-seo">
+            </a>
+            <a href="" class="desc-o">
+                <img src="access/img/whatsapp.svg" alt="" class="img-seo">
+            </a>
+            <a href="" class="desc-o">
+                <img src="access/img/rac.svg" alt="" class="img-seo">
+            </a>
+        </div>
+      <div class="main-banner" id="top">
+        <div class="main__banner-fon">
+            <img src="access/img/svet-1.svg" alt="" class="dev_svet">
+            <img src="access/img/svet-2.svg" alt="" class="dev_svet2">
+            <img src="access/img/svet-3.svg" alt="" class="dev_svet3">
+          <div class="container">
+            <div class="banner__content">
+              <div class="banner__content-top">
+                <h1>
+                  Продаем и строим <br />
+                  <span>кровли "под ключ"</span>
+                </h1>
+                <div class="banner__top-subtitle">
+                  без предоплаты с 2014 года
+                </div>
+              </div>
+              <ul type="disc" class="banner__content-main">
+                <li>Бесплатный выезд замерщика в пределах 30км от Минска</li>
+                <li>Кредит и рассрочка 0%</li>
+                <li>Более 100 положительных отзывов</li>
+              </ul>
+              <a href="" class="btn btn__calcul">
+                <img src="access/img/shop-svg.svg" alt="" />
+                Интернет-магазин</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="main__banner-menu">
+          <div class="container">
+            <div class="banner__menu">
+              <div class="banner__menu-col">
+                <a href class="banner__col-item">
+                  <div class="banner__arr">
+                    <img src="access/img/banner-arr.svg" alt="" />
+                  </div>
+                  <img
+                    src="access/img/home-house-sale.svg"
+                    alt=""
+                    class="banner__item-img"
+                  />
+                  <div class="banner__item-text">
+                    Купить кровельные материалы
+                  </div>
+                </a>
+                <div class="border-line"></div>
+                <a href class="banner__col-item">
+                  <div class="banner__arr">
+                    <img src="access/img/banner-arr.svg" alt="" />
+                  </div>
+                  <img
+                    src="access/img/house-garage.svg"
+                    alt=""
+                    class="banner__item-img"
+                  />
+                  <div class="banner__item-text">
+                    Купить кровельные материалы
+                  </div>
+                </a>
+                <div class="border-line"></div>
+                <a href class="banner__col-item">
+                  <div class="banner__arr">
+                    <img src="access/img/banner-arr.svg" alt="" />
+                  </div>
+                  <img
+                    src="access/img/sale-discount-promotion-label.1.svg"
+                    alt=""
+                    class="banner__item-img"
+                  />
+                  <div class="banner__item-text">
+                    Купить кровельные материалы
+                  </div>
+                </a>
+                <div class="border-line"></div>
+                <a href class="banner__col-item">
+                  <div class="banner__arr">
+                    <img src="access/img/banner-arr.svg" alt="" />
+                  </div>
+                  <img
+                    src="access/img/home-house-change.svg"
+                    alt=""
+                    class="banner__item-img"
+                  />
+                  <div class="banner__item-text">
+                    Купить кровельные материалы
+                  </div>
+                </a>
+                <div class="border-line"></div>
+                <a href class="banner__col-item">
+                  <div class="banner__arr">
+                    <img src="access/img/banner-arr.svg" alt="" />
+                  </div>
+                  <img
+                    src="access/img/money-coins.1.svg"
+                    alt=""
+                    class="banner__item-img"
+                  />
+                  <div class="banner__item-text">
+                    Купить кровельные материалы
+                  </div>
+                </a>
+                <div class="border-line"></div>
+                <a href class="banner__col-item">
+                  <div class="banner__arr">
+                    <img src="access/img/banner-arr.svg" alt="" />
+                  </div>
+                  <img
+                    src="access/img/calculator1.svg"
+                    alt=""
+                    class="banner__item-img"
+                  />
+                  <div class="banner__item-text">
+                    Купить кровельные материалы
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="main-catalog">
+        <div class="container">
+          <div class="vac__content-main_col">
+            <h2 class="vacancy__content-top">Каталог RoofLand</h2>
+            <div class="catalog__items">
+              <a href="" class="catalog__items-item">
+                <div class="banner__arr">
+                  <img src="access/img/banner-arr.svg" alt="" />
+                </div>
+                <img
+                  src="access/img/Purex2Н35.png"
+                  alt=""
+                  class="catalog__item-img"
+                />
+                <div class="catalog__item-text">
+                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-subtitle">
+                    Металлочерепица, модульная металлочерепица, фальцевая кровля
+                    и др.
+                  </div>
+                </div>
+              </a>
+              <a href="" class="catalog__items-item">
+                <div class="banner__arr">
+                  <img src="access/img/banner-arr.svg" alt="" />
+                </div>
+                <img
+                  src="access/img/img-w.png"
+                  alt=""
+                  class="catalog__item-img"
+                />
+                <div class="catalog__item-text">
+                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-subtitle">
+                    Металлочерепица, модульная металлочерепица, фальцевая кровля
+                    и др.
+                  </div>
+                </div>
+              </a>
+              <a href="" class="catalog__items-item">
+                <div class="banner__arr">
+                  <img src="access/img/banner-arr.svg" alt="" />
+                </div>
+                <img
+                  src="access/img/img-w2.png"
+                  alt=""
+                  class="catalog__item-img"
+                />
+                <div class="catalog__item-text">
+                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-subtitle">
+                    Металлочерепица, модульная металлочерепица, фальцевая кровля
+                    и др.
+                  </div>
+                </div>
+              </a>
+              <a href="" class="catalog__items-item">
+                <div class="banner__arr">
+                  <img src="access/img/banner-arr.svg" alt="" />
+                </div>
+                <img
+                  src="access/img/img-w3.png"
+                  alt=""
+                  class="catalog__item-img"
+                />
+                <div class="catalog__item-text">
+                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-subtitle">
+                    Металлочерепица, модульная металлочерепица, фальцевая кровля
+                    и др.
+                  </div>
+                </div>
+              </a>
+              <a href="" class="catalog__items-item">
+                <div class="banner__arr">
+                  <img src="access/img/banner-arr.svg" alt="" />
+                </div>
+                <img
+                  src="access/img/img-w4.png"
+                  alt=""
+                  class="catalog__item-img"
+                />
+                <div class="catalog__item-text">
+                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-subtitle">
+                    Металлочерепица, модульная металлочерепица, фальцевая кровля
+                    и др.
+                  </div>
+                </div>
+              </a>
+              <a href="" class="catalog__items-item">
+                <div class="banner__arr">
+                  <img src="access/img/banner-arr.svg" alt="" />
+                </div>
+                <img
+                  src="access/img/img-w5.png"
+                  alt=""
+                  class="catalog__item-img"
+                />
+                <div class="catalog__item-text">
+                  <div class="catalog__item-title">Материалы для кровли</div>
+                  <div class="catalog__item-subtitle">
+                    Металлочерепица, модульная металлочерепица, фальцевая кровля
+                    и др.
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-about">
+        <div class="container">
+          <div class="about__content">
+            <div class="about__content-left">
+              <h2>О компании RoofLand</h2>
+              <p>
+                <strong>Владимир Вашкалай </strong>- Руковожу ООО «Руфлэнд» с
+                2014 года
+              </p>
+              <video
+                src=""
+                poster="access/img/image-about.png"
+                class="video-about"
+              ></video>
+              <a href="" class="btn btn__calcul"
+                >Узнать больше о компании
+                <span>
+                  <img src="access/img/arr-banner.svg" alt="" /> </span
+              ></a>
+            </div>
+            <div class="about__content-rigth">
+              <div class="about__content-rigth_btns">
+                <a href="#" class="btn button--ghost btn btn__shop">
+                  <img
+                    src="access/img/ig-colored.webp"
+                    alt="icon"
+                    width="26"
+                  />&ensp;Наш Instagram&ensp;<span>⬈</span>
+                </a>
+                <a href="#" class="btn button--ghost btn btn__shop">
+                  <img
+                    src="access/img/yt-colored.webp"
+                    alt="icon"
+                    width="26"
+                  />&ensp;Наш YouTube канал&ensp;<span>⬈</span>
+                </a>
+              </div>
+              <p>
+                Компания Руфлэнд была основана в октябре 2014 года. На
+                сегодняшний день мы развиваем два основных направления своей
+                деятельности продажа кровельных материалов и кровельные работы.
+              </p>
+              <p>
+                С 2017 года мы являемся эксклюзивным представителем польского
+                производителя кровельных материалов компании Dachpol на
+                территории Республики Беларусь. Наша компания имеет собственные
+                монтажные бригады, склад с широким ассортиментом кровельных
+                материалов и комплектующих. С каждым годом мы стараемся улучшать
+                уровень сервиса и следуем своей цели.
+              </p>
+              <div class="about__rigth-info">
+                <div class="about__rigth-info_item">
+                  <div class="about__item-box">
+                    <img src="access/img/money-20.svg" alt="" />
+                  </div>
+                  <span
+                    >За неиспользованный материал
+                    <strong> возвращаем деньги</strong></span
+                  >
+                </div>
+                <div class="about__rigth-info_item">
+                  <div class="about__item-box">
+                    <img src="access/img/time-loading-back.svg" alt="" />
+                  </div>
+                  <span><strong>Рассрочка</strong> платежа до 24 месяцев</span>
+                </div>
+                <div class="about__rigth-info_item">
+                  <div class="about__item-box">
+                    <img src="access/img/calendar-chedule-clock.svg" alt="" />
+                  </div>
+                  <span>Работаем по <strong>выходным</strong></span>
+                </div>
+                <div class="about__rigth-info_item">
+                  <div class="about__item-box">
+                    <img src="access/img/money-banknote.5.svg" alt="" />
+                  </div>
+                  <span>Любая возможная <strong>форма оплаты</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-numbers">
+        <div class="main-numbers__viewport">
+          <div class="main-numbers__track">
+            <div class="main-numbers__group">
+              <div class="main__numbers-item">
+                14 <span>собственных монтажных бригад</span>
+              </div>
+              <div class="border-line"></div>
+              <div class="main__numbers-item">
+                600 <span>смонтированных объектов</span>
+              </div>
+              <div class="border-line"></div>
+              <div class="main__numbers-item">
+                120 <span>положительных отзывов</span>
+              </div>
+              <div class="border-line"></div>
+              <div class="main__numbers-item">
+                20 <span>лет гарантия на кровельные материалы</span>
+              </div>
+              <div class="border-line"></div>
+            </div>
+
+            <!-- ДУБЛЬ -->
+            <div class="main-numbers__group clone"></div>
+          </div>
+        </div>
+      </section>
+      <section class="main-popular js-tabs">
+        <div class="container">
+          <h2 class="main__top">
+            Популярные товары
+            <a href="" class="btn btn__shop desc-o"
+              >Онлайн-магазин товаров <span>⬈</span></a
+            >
+          </h2>
+          <div class="rew__content-top">
+            <div class="rew__top-btns">
+              <!-- Desktop buttons -->
+              <div class="tab-buttons">
+                <button class="tab-button active" data-tab="roofing">
+                  Материалы для кровли
+                </button>
+                <button class="tab-button" data-tab="facade">
+                  Материалы для фасада
+                </button>
+                <button class="tab-button" data-tab="fences">
+                  Заборы и ограждения
+                </button>
+                <button class="tab-button" data-tab="drainpipes">
+                  Водосточные системы
+                </button>
+              </div>
+              <!-- Mobile select -->
+              <div class="custom-dropdown tab-select">
+                <div class="dropdown-toggle">
+                  Материалы для кровли
+                  <span class="dropdown-arrow"></span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li data-value="roofing" class="active">
+                    Материалы для кровли
+                  </li>
+                  <li data-value="facade">Материалы для фасада</li>
+                  <li data-value="fences">Заборы и ограждения</li>
+                  <li data-value="drainpipes">Водосточные системы</li>
+                </ul>
+              </div>
+            </div>
+            <div class="vacan-swiper_btns">
+              <div
+                class="vacan__swiper--button popular-button-prev swiper-button-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-back.svg" alt="" />
+              </div>
+              <div
+                class="vacan__swiper--button popular-button-next swiper-button-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-next.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div id="roofing" class="tab-content active">
+            <div class="swiper popular-swiper">
+              <div class="swiper-wrapper popular__content">
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-1.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                    <div class="box__stocks">
+                        <div class="item__stocks">% Акция</div>
+                        <div class="item__stocks choice">Выбор покупателей</div>
+                    </div>
+                    
+                    <div class="popular__item-content">
+                        <div class="popular__item-top">
+                            <a href="">
+                                <h5 class="popular__item-title">
+                                    Egeria Dachpol
+                                </h5>
+                            </a>
+                            <div class="popular__item-text">
+                                <p>
+                                Модульная металлочерепица
+                                </p>
+                            </div>
+                            <div class="popular__item-price">
+                                от <span>50 BYN</span>
+                            </div>
+                            <div class="popular__item-btns">
+                                <a href="" class="btn btn-more">Подробнее</a>
+                                <a href="" class="btn btn__calcul">
+                                <img src="access/img/shop-svg.svg" alt="" />
+                                В магазин</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="swiper-slide popular__content-item">
+                 
+                  <a href="" class="popular__item-link">
+                        <img src="access/img/2-2.png" alt="blog-prom" class="img-item"/>
+                    </a>
+                 <div class="box__stocks">
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Arte Dachpol
+                            </h5>
+                        </a>
+                        <div class="popular__item-text">
+                            <p>
+                            Модульная металлочерепица
+                            </p>
+                        </div>
+                        <div class="popular__item-price">
+                            от <span>50 BYN</span>
+                        </div>
+                        <div class="popular__item-btns">
+                            <a href="" class="btn btn-more">Подробнее</a>
+                            <a href="" class="btn btn__calcul">
+                            <img src="access/img/shop-svg.svg" alt="" />
+                            В магазин</a
+                            >
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img src="access/img/2-1.png" alt="blog-prom" class="img-item"/>
+                    </a>
+                  <div class="box__stocks">
+                    <div class="item__stocks new">Новинка</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Egeria Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-1.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                  <div class="box__stocks">
+                    <div class="item__stocks">% Акция</div>
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Egeria Dachpol
+                            </h5>
+                        </a>
+                        <div class="popular__item-text">
+                            <p>
+                            Модульная металлочерепица
+                            </p>
+                        </div>
+                        <div class="popular__item-price">
+                            от <span>50 BYN</span>
+                        </div>
+                        <div class="popular__item-btns">
+                            <a href="" class="btn btn-more">Подробнее</a>
+                            <a href="" class="btn btn__calcul">
+                            <img src="access/img/shop-svg.svg" alt="" />
+                            В магазин</a
+                            >
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-1.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                  <div class="box__stocks">
+                    <div class="item__stocks">% Акция</div>
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Egeria Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-2.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                 <div class="box__stocks">
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Arte Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="facade" class="tab-content">
+            <div class="swiper popular-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-1.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                  <div class="box__stocks">
+                    <div class="item__stocks">% Акция</div>
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Egeria Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-2.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                 <div class="box__stocks">
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Arte Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="fences" class="tab-content">
+            <div class="swiper popular-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-1.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                  <div class="box__stocks">
+                    <div class="item__stocks">% Акция</div>
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Egeria Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-2.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                 <div class="box__stocks">
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Arte Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="drainpipes" class="tab-content">
+            <div class="swiper popular-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-1.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                  <div class="box__stocks">
+                    <div class="item__stocks">% Акция</div>
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Egeria Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide popular__content-item">
+                    <a href="" class="popular__item-link">
+                        <img
+                            src="access/img/2-2.png"
+                            alt="blog-prom"
+                            class="img-item"
+                        />
+                    </a>
+                 <div class="box__stocks">
+                    <div class="item__stocks choice">Выбор покупателей</div>
+                  </div>
+                  <div class="popular__item-content">
+                    <div class="popular__item-top">
+                        <a href="">
+                            <h5 class="popular__item-title">
+                                Arte Dachpol
+                            </h5>
+                        </a>
+                      <div class="popular__item-text">
+                        <p>
+                          Модульная металлочерепица
+                        </p>
+                      </div>
+                      <div class="popular__item-price">
+                        от <span>50 BYN</span>
+                      </div>
+                      <div class="popular__item-btns">
+                        <a href="" class="btn btn-more">Подробнее</a>
+                        <a href="" class="btn btn__calcul">
+                          <img src="access/img/shop-svg.svg" alt="" />
+                          В магазин</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t">Онлайн-магазин товаров <span>⬈</span></a>
+        </div>
+      </section>
+
+      <section class="price-list roof-pad">
+        <div class="container">
+          <div class="price-list__content">
+            <div class="price-list__content-wrap">
+              <h2 class="price-list__title">Прайс-лист на услуги</h2>
+              <p>
+                Не тратьте время на долгие поиски.<br />
+                Скачайте прайс с описанием и актуальными ценами
+              </p>
+            </div>
+            <div class="price-form-wrapper">
+              <form
+                class="price-form"
+                action="#"
+                method="POST"
+                autocomplete="off"
+                novalidate=""
+              >
+                <h3 class="price-form__title">Куда отправить прайс-лист?</h3>
+
+                <div class="price-form__radios">
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="telegram"
+                      required=""
+                      checked=""
+                    />
+                    <span>Telegram</span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="viber"
+                      required=""
+                    />
+                    <span>Viber</span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="email"
+                      required=""
+                    />
+                    <span>E-mail</span>
+                  </label>
+                </div>
+
+                <label class="price-form__label" for="phone"
+                  >Введите номер телефона</label
+                >
+
+                <input
+                  class="price-form__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  pattern="^[0-9+\-\s()]{6,20}$"
+                  required=""
+                />
+                <label class="form-control contact-form__checkbox">
+                  <input type="checkbox" name="agree" checked required />
+                  <span
+                    >Я соглашаюсь с
+                    <a href="">условиями обработки персональных данных</a></span
+                  >
+                </label>
+
+                <button class="btn btn__calcul" type="submit">
+                  Получить прайс
+                </button>
+
+                <div class="price-form__update">Прайс обновлен 20.04.2025</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-project">
+        <div class="container">
+          <h2 class="main__top">
+            Наши проекты
+            <a href="" class="btn btn__shop desc-o">Посмотреть все портфолио <span>⬈</span></a>
+          </h2>
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper vacancy__content-items">
+              <div class="swiper-slide vacancy__content-item">
+                <li class="project-list__item is-visible">
+                  <a>
+                    <article
+                      class="project-card"
+                      data-images="
+                                access/img/image-card-portfolio.webp,
+                                access/img/card-img1.webp,
+                                access/img/card-img2.webp,
+                                access/img/card-img3.webp,
+                                access/img/card-img4.webp,
+                                access/img/card-img5.webp,
+                            "
+                    >
+                      <div class="project-card__left">
+                        <div class="project-card__badges">
+                          <span class="project-badge">
+                            <img
+                              src="access/img/icon-scad.svg"
+                              alt="icon"
+                            />2025 г.
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-time.svg" alt="icon" /> 14
+                            дней
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-house.svg" alt="icon" />
+                            360.00 м²
+                          </span>
+                        </div>
+
+                        <h3 class="project-card__title">
+                          Монтаж круглой кровли в г.п.Мачулищи
+                        </h3>
+
+                        <ul class="project-card__list">
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="project-card__right">
+                        <img
+                          class="project-card__img"
+                          src="access/img/image-card-portfolio.webp"
+                          alt="Проект"
+                        />
+
+                        <div
+                          class="project-card__view"
+                          href="#"
+                          aria-label="Смотреть проект"
+                        >
+                          <img src="access/img/icon-eye.svg" alt="view" />
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide vacancy__content-item">
+                <li class="project-list__item is-visible">
+                  <a>
+                    <article
+                      class="project-card"
+                      data-images="
+                                access/img/image-card-portfolio.webp,
+                                access/img/card-img1.webp,
+                                access/img/card-img2.webp,
+                                access/img/card-img3.webp,
+                                access/img/card-img4.webp,
+                                access/img/card-img5.webp,
+                            "
+                    >
+                      <div class="project-card__left">
+                        <div class="project-card__badges">
+                          <span class="project-badge">
+                            <img
+                              src="access/img/icon-scad.svg"
+                              alt="icon"
+                            />2025 г.
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-time.svg" alt="icon" /> 14
+                            дней
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-house.svg" alt="icon" />
+                            360.00 м²
+                          </span>
+                        </div>
+
+                        <h4 class="project-card__title">
+                          Монтаж круглой кровли в г.п.Мачулищи
+                        </h4>
+
+                        <ul class="project-card__list">
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="project-card__right">
+                        <img
+                          class="project-card__img"
+                          src="access/img/image-card-portfolio.webp"
+                          alt="Проект"
+                        />
+
+                        <div
+                          class="project-card__view"
+                          href="#"
+                          aria-label="Смотреть проект"
+                        >
+                          <img src="access/img/icon-eye.svg" alt="view" />
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide vacancy__content-item">
+                <li class="project-list__item is-visible">
+                  <a>
+                    <article
+                      class="project-card"
+                      data-images="
+                                access/img/image-card-portfolio.webp,
+                                access/img/card-img1.webp,
+                                access/img/card-img2.webp,
+                                access/img/card-img3.webp,
+                                access/img/card-img4.webp,
+                                access/img/card-img5.webp,
+                            "
+                    >
+                      <div class="project-card__left">
+                        <div class="project-card__badges">
+                          <span class="project-badge">
+                            <img
+                              src="access/img/icon-scad.svg"
+                              alt="icon"
+                            />2025 г.
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-time.svg" alt="icon" /> 14
+                            дней
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-house.svg" alt="icon" />
+                            360.00 м²
+                          </span>
+                        </div>
+
+                        <h4 class="project-card__title">
+                          Монтаж круглой кровли в г.п.Мачулищи
+                        </h4>
+
+                        <ul class="project-card__list">
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="project-card__right">
+                        <img
+                          class="project-card__img"
+                          src="access/img/image-card-portfolio.webp"
+                          alt="Проект"
+                        />
+
+                        <div
+                          class="project-card__view"
+                          href="#"
+                          aria-label="Смотреть проект"
+                        >
+                          <img src="access/img/icon-eye.svg" alt="view" />
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div class="vacan-swiper_btns">
+              <div
+                class="vacan__swiper--button swiper-button-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-back.svg" alt="" />
+              </div>
+              <div
+                class="vacan__swiper--button swiper-button-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-next.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t"
+            >Посмотреть все портфолио <span>⬈</span></a
+          >
+        </div>
+      </section>
+      <section class="main-team">
+        <div class="container">
+          <h2 class="main__top">
+            Команда RoofLand
+          </h2>
+          <div class="swiper team-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="team__content">
+                        <div class="team__content-left">
+                            <!-- <img src="access/img/percon-img.jpg" alt="" class="person-img"> -->
+                            <div class="team__left-block">
+                                <div class="team__left-block_col">
+                                    <div class="team__col-title">Владимир Вашкалай</div>
+                                    <div class="team__col-subtitle">Руковожу ООО «Руфлэнд» с 2014 года</div>
+                                </div>
+                                <div class="header-logo">
+                                    <img src="access/img/logo-header.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-right">
+                            <div class="team__content-right_block">
+                                <div class="team__right-block_col">
+                                    <span>25 человек</span>
+                                    <p>В нашей дружной команде</p>
+                                </div>
+                                <a href="">Стать частью RoofLand Team ⬈</a>
+                            </div>
+                            <div class="vac__col-info">
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                    <h4>10 лет</h4>
+                                    <p>В строительстве</p>
+                                    </div>
+                                </div>
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                    <h4>Более 150</h4>
+                                    <p>Проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="rew__item-title">Ух и необычный дом для наших широт нам довеловь делать. Проект конечно необычный и очень интересный, стены дома возведены из газосиликатного блока. Нами же выполнялась вся фасадная отделка металлическим сайдингом с утеплением. </p>
+                            <div class="vacan-swiper_btns">
+                                <div class="vacan__swiper--button team-button-prev swiper-button-prev" tabindex="0"  role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-back.svg" alt="" />
+                                </div>
+                                <div class="vacan__swiper--button team-button-next swiper-button-next"  tabindex="0" role="button" aria-label="Next slide"  aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-next.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="team__content">
+                        <div class="team__content-left">
+                            <!-- <img src="access/img/percon-img.jpg" alt="" class="person-img"> -->
+                            <div class="team__left-block">
+                                <div class="team__left-block_col">
+                                    <div class="team__col-title">Владимир Вашкалай</div>
+                                    <div class="team__col-subtitle">Руковожу ООО «Руфлэнд» с 2014 года</div>
+                                </div>
+                                <div class="header-logo">
+                                    <img src="access/img/logo-header.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team__content-right">
+                            <div class="team__content-right_block">
+                                <div class="team__right-block_col">
+                                    <span>25 человек</span>
+                                    <p>В нашей дружной команде</p>
+                                </div>
+                                <a href="">Стать частью RoofLand Team ⬈</a>
+                            </div>
+                            <div class="vac__col-info">
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                        <h4>10 лет</h4>
+                                        <p>В строительстве</p>
+                                    </div>
+                                </div>
+                                <div class="vac__col-info_item">
+                                    <div class="vac_layout"></div>
+                                    <div class="vac__info-item_content">
+                                        <h4>Более 150</h4>
+                                        <p>Проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="rew__item-title">Ух и необычный дом для наших широт нам довеловь делать. Проект конечно необычный и очень интересный, стены дома возведены из газосиликатного блока. Нами же выполнялась вся фасадная отделка металлическим сайдингом с утеплением. </p>
+                            <div class="vacan-swiper_btns">
+                                <div class="vacan__swiper--button team-button-prev swiper-button-prev" tabindex="0"  role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-back.svg" alt="" />
+                                </div>
+                                <div class="vacan__swiper--button team-button-next swiper-button-next"  tabindex="0" role="button" aria-label="Next slide"  aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                    <img src="access/img/arrows-next.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-reviews">
+        <div class="container">
+            <h2 class="main__top">
+            Что говорят о нас клиенты
+            <a href="" class="btn btn__shop desc-o">Посмотреть все отзывы <span>⬈</span></a>
+          </h2>
+          <div class="swiper reviews-swiper">
+            <div class="swiper-wrapper reviews__content">
+              <div class="swiper-slide reviews__content-item">
+                <div class="reviews__list-item">
+                    <div class="reviews-card__left">
+                        <div class="reviews-card__left-block">
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                            <div class="rew-data">03.08.2022</div>
+                            <h4>Екатерана Маханек</h4>
+                            <p class="rew__item-title">
+                                Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!
+                            </p>
+                            <a href class="card__link">Отзыв на Яндекс.Картах</a>
+                        </div>
+                        <div class="vacan-swiper_btns">
+                            <div
+                                class="vacan__swiper--button reviews-button-prev swiper-button-prev"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+                            >
+                                <img src="access/img/arrows-back.svg" alt="" />
+                            </div>
+                            <div
+                                class="vacan__swiper--button reviews-button-next swiper-button-next"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Next slide"
+                                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                <img src="access/img/arrows-next.svg" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="reviews-card__right">
+                        <img src="access/img/Frame.png" alt="">
+                    </div>
+                </div>
+                
+              </div>
+              <div class="swiper-slide reviews__content-item">
+                <div class="reviews__list-item">
+                    <div class="reviews-card__left">
+                        <div class="reviews-card__left-block">
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                            <div class="rew-data">03.08.2022</div>
+                            <h4>Екатерана Маханек</h4>
+                            <p class="rew__item-title">
+                                Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!
+                            </p>
+                            <a href="" class="card__link">Отзыв на Яндекс.Картах</a>
+                        </div>
+                        <div class="vacan-swiper_btns">
+                            <div
+                                class="vacan__swiper--button reviews-button-prev swiper-button-prev"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Previous slide"
+                                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+                            >
+                                <img src="access/img/arrows-back.svg" alt="" />
+                            </div>
+                            <div
+                                class="vacan__swiper--button reviews-button-next swiper-button-next"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Next slide"
+                                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10">
+                                <img src="access/img/arrows-next.svg" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="reviews-card__right">
+                        <img src="access/img/Frame.png" alt="">
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t">Посмотреть все отзывы <span>⬈</span></a>
+        </div>
+      </section>
+      <section class="main-articles js-tabs">
+        <div class="container">
+          <h2 class="main__top">
+            Полезные статьи
+            <a href="" class="btn btn__shop desc-o"
+              >Перейти в блог <span>⬈</span></a
+            >
+          </h2>
+          <div class="rew__content-top">
+            <div class="rew__top-btns">
+              <!-- Desktop buttons -->
+              <div class="tab-buttons">
+                <button class="tab-button active" data-tab="shares">
+                  Акции
+                </button>
+                <button class="tab-button" data-tab="news">Новости</button>
+                <button class="tab-button" data-tab="tips">
+                  Полезные советы
+                </button>
+                <button class="tab-button" data-tab="reviews">Обзоры</button>
+              </div>
+              <!-- Mobile select -->
+              <div class="custom-dropdown tab-select">
+                <div class="dropdown-toggle">
+                  Акции
+                  <span class="dropdown-arrow"></span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li data-value="shares" class="active">Акции</li>
+                  <li data-value="news">Новости</li>
+                  <li data-value="tips">Полезные советы</li>
+                  <li data-value="reviews">Обзоры</li>
+                </ul>
+              </div>
+            </div>
+            <div class="vacan-swiper_btns">
+              <div
+                class="vacan__swiper--button articles-button-prev swiper-button-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-back.svg" alt="" />
+              </div>
+              <div
+                class="vacan__swiper--button articles-button-next swiper-button-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-next.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div id="shares" class="tab-content active">
+            <div class="swiper articles-swiper">
+              <div class="swiper-wrapper vacancy__content-items blog__content-items-3">
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Акция апрель-май на ограждения
+                        </h4>
+                        <p>
+                          Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех
+                          доступных цветах и покрытиях!
+                        </p>
+                        <p>
+                          АКЦИЯ действует с 24.04.2023 до 31.05.2024
+                          включительно
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        обзоры
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Видео о строительстве необычного дома на нашем YouTube
+                          канале
+                        </h4>
+                        <p>Часть 1, Часть 2, Часть 3</p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        новости
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Металлочерепица Монтерроса – новинка в ассортиментном
+                          ряду Компании Металл Профиль
+                        </h4>
+                        <p>
+                          Металлочерепица Монтерроса – новинка в ассортиментном
+                          ряду Компании Металл Профиль, продажи этого профиля
+                          стартовали в 2018 году.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Акция апрель-май на ограждения
+                        </h4>
+                        <p>
+                          Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех
+                          доступных цветах и покрытиях!
+                        </p>
+                        <p>
+                          АКЦИЯ действует с 24.04.2023 до 31.05.2024
+                          включительно
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="news" class="tab-content">
+            <div class="swiper articles-swiper">
+              <div
+                class="swiper-wrapper vacancy__content-items blog__content-items-3"
+              >
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Акция апрель-май на ограждения
+                        </h4>
+
+                        <p>
+                          Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех
+                          доступных цветах и покрытиях!
+                        </p>
+                        <p>
+                          АКЦИЯ действует с 24.04.2023 до 31.05.2024
+                          включительно
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="tips" class="tab-content">
+            <div class="swiper articles-swiper">
+              <div
+                class="swiper-wrapper vacancy__content-items blog__content-items-3"
+              >
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        обзоры
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Видео о строительстве необычного дома на нашем YouTube
+                          канале
+                        </h4>
+                        <p>Часть 1, Часть 2, Часть 3</p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Акция апрель-май на ограждения
+                        </h4>
+
+                        <p>
+                          Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех
+                          доступных цветах и покрытиях!
+                        </p>
+                        <p>
+                          АКЦИЯ действует с 24.04.2023 до 31.05.2024
+                          включительно
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Акция апрель-май на ограждения
+                        </h4>
+
+                        <p>
+                          Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех
+                          доступных цветах и покрытиях!
+                        </p>
+                        <p>
+                          АКЦИЯ действует с 24.04.2023 до 31.05.2024
+                          включительно
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        акция
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Акция апрель-май на ограждения
+                        </h4>
+
+                        <p>
+                          Акция на штакетник ТРАПЕЦИЯ-УСИЛЕННАЯ - 5%, во всех
+                          доступных цветах и покрытиях!
+                        </p>
+                        <p>
+                          АКЦИЯ действует с 24.04.2023 до 31.05.2024
+                          включительно
+                        </p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="reviews" class="tab-content">
+            <div class="swiper articles-swiper">
+              <div
+                class="swiper-wrapper vacancy__content-items blog__content-items-3"
+              >
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        обзоры
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Видео о строительстве необычного дома на нашем YouTube
+                          канале
+                        </h4>
+                        <p>Часть 1, Часть 2, Часть 3</p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="swiper-slide blog__content-item">
+                  <img
+                    src="access/img/img-item.jpg"
+                    alt="blog-prom"
+                    class="img-item"
+                  />
+                  <div class="blog__item-content">
+                    <div class="blog__item-top">
+                      <div class="blog-promotion">
+                        обзоры
+                        <span>RoofLand</span>
+                      </div>
+                      <div class="blog__item-text">
+                        <h4 class="blog__item-title">
+                          Видео о строительстве необычного дома на нашем YouTube
+                          канале
+                        </h4>
+                        <p>Часть 1, Часть 2, Часть 3</p>
+                      </div>
+                    </div>
+                    <div class="blog-data">
+                      <div class="blog__data-left">
+                        24.10.2023 <span class="point"></span
+                        ><span>9 мин чтения</span>
+                      </div>
+                      <div class="blog__data-rigth">
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/eye.svg" alt="" />
+                          3
+                        </div>
+                        <div class="blog__data-rigth_box">
+                          <img src="access/img/mes.svg" alt="" />
+                          3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t"
+            >Перейти в блог <span>⬈</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="project-modal" id="projectModal">
+      <div class="project-modal__overlay"></div>
+
+      <div class="project-modal__content roof-pad">
+        <button class="project-modal__close" aria-label="Закрыть">
+          <img src="access/img/close-modal.svg" alt="" />
+        </button>
+
+        <div class="project-modal__slider">
+          <div class="swiper" id="projectSwiper">
+            <div class="swiper-wrapper" id="projectSwiperWrapper"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="project-modal__info" id="projectModalInfo"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/index.js"></script>
+  </body>
+</html>
