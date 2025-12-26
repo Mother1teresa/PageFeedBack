@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
         1440: { allowTouchMove: true },
         1024: { spaceBetween: 16, allowTouchMove: true },
         768: { allowTouchMove: false },
-        0: { slidesPerGroup: 1 },
+        0: { slidesPerGroup: 1, allowTouchMove: false },
       },
       navigation: {
         nextEl: ".project-swiper .swiper-button-next",
@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
         1440: { allowTouchMove: true },
         1024: { spaceBetween: 16, allowTouchMove: true },
         768: { allowTouchMove: false },
-        0: { slidesPerGroup: 1 },
+        0: { slidesPerGroup: 1 ,allowTouchMove: false},
       },
       navigation: {
         nextEl: ".articles-button-next",
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
         1440: { allowTouchMove: true },
         1024: { spaceBetween: 16, allowTouchMove: true },
         768: { allowTouchMove: false },
-        0: { slidesPerGroup: 1 },
+        0: { slidesPerGroup: 1, allowTouchMove: false },
       },
       navigation: {
         nextEl: ".popular-button-next",
