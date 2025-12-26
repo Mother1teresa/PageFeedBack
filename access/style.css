@@ -3574,7 +3574,7 @@ body.no-scroll {
   padding: 1.5rem;
   position: fixed;
   right: 0;
-  top: 20%;
+  top: 30%;
   background: #00000033;
   backdrop-filter: blur(3px);
   border-top-left-radius: 1rem;
