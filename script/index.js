@@ -562,21 +562,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".main-numbers__track");
+  if (!track) return; 
   const group = track.querySelector(".main-numbers__group");
   const clone = track.querySelector(".clone");
 
-  // 1. Клонируем 1 в 1
+  if (!group || !clone) return; 
   clone.innerHTML = group.innerHTML;
-
-  // 2. Получаем точную ширину ОДНОЙ группы
   const width = group.offsetWidth;
-
-  // 3. Анимация
   gsap.set(track, { x: 0 });
 
   gsap.to(track, {
     x: -width,
-    duration: 30,     // скорость
+    duration: 30, // скорость
     ease: "none",
     repeat: -1
   });
