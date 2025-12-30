@@ -830,6 +830,7 @@ footer {
 .footer-content {
   display: flex;
   gap: 2.563rem;
+  align-items: center;
 }
 .footer__form-content {
   display: grid;
@@ -2501,7 +2502,7 @@ body.no-scroll {
   left: -0rem;
 }
 .banner__content-main li {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.875rem;
   position: relative;
   padding: 0 0 0 1.4rem;
@@ -2763,6 +2764,7 @@ body.no-scroll {
   border-radius: 1.5rem;
   align-items: stretch;
   cursor: pointer;
+  height: 19.375rem;
 }
 .project-card:hover .project-card__view {
   transform: translateY(-1px);
@@ -2808,16 +2810,16 @@ body.no-scroll {
   margin: 0;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.4;
+  /* line-height: ; */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 7;
   overflow: hidden;
 }
 
-.project-card__list li {
+/* .project-card__list li {
   margin-bottom: 0.625rem;
-}
+} */
 
 .project-card__right {
   position: relative;
@@ -3487,7 +3489,7 @@ body.no-scroll {
 }
 
 .reviews-card__left {
-  padding: 2.5rem;
+  padding: 2.5rem 2.4rem 2.5rem 2.5rem;
 }
 .reviews-card__left-block .rew-stars {
   margin-bottom: 1.25rem;
@@ -3801,11 +3803,11 @@ body.no-scroll {
 .banner-work__content-top {
   position: relative;
   width: 100%;
-  padding: 4.533rem 0 7.25rem 5rem;
+  padding: 4rem 0px 4rem 5rem;
   background-image: linear-gradient(
       270.69deg,
       rgba(0, 0, 0, 0) 0.47%,
-      rgba(0, 0, 0, 0.8) 100.05%
+      rgba(0, 0, 0, 0.6) 100.05%
     ),
     url(img/imag-work.png);
   background-size: cover;
@@ -3934,7 +3936,7 @@ body.no-scroll {
   gap: 2.5rem;
 }
 .block-reviews .reviews-card__left-block .rew__item-title {
-  -webkit-line-clamp: none;
+  -webkit-line-clamp: 10;
 }
 .block-reviews .reviews-card__right {
   height: auto;
@@ -4135,23 +4137,13 @@ body.no-scroll {
 .learn__content-info_text li::marker {
   height: auto;
 }
-ul:not(
-    .dropdown-menu,
-    .pagination,
-    .banner__content-main,
-    .project-card__list
-  )
+ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
   li {
   font-style: normal;
   position: relative;
   padding: 0 0 0 1rem;
 }
-ul:not(
-    .dropdown-menu,
-    .pagination,
-    .banner__content-main,
-    .project-card__list
-  )
+ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
   li::before {
   display: block;
   content: "";
@@ -4231,9 +4223,9 @@ ul:not(
   font-weight: 600;
 }
 .stage__item-text li::before {
-  background: #424242;
-  width: 0.563rem !important;
-  height: 0.563rem !important;
+  background: #424242 !important;
+  width: 0.5rem !important;
+  height: 0.5rem !important;
   top: 0.2rem !important;
 }
 .stage__item-text li {
@@ -4247,6 +4239,8 @@ ul:not(
 .stage__item-order img {
   order: 2;
   margin-top: -1.5rem;
+  object-view-box: inset(20%);
+  object-position: 24% 171%;
 }
 .stage__item-order .stage__content-item_block {
   margin: 0;
@@ -4259,6 +4253,8 @@ ul:not(
   .stage__item-order img {
     order: 1;
     margin-top: 0;
+    object-view-box: inset(0%);
+    object-position: 0;
   }
   .stage__item-order .stage__content-item_block {
     margin-top: -1.5rem;
