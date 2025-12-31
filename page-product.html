@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="access\style.css" />
+    <title>Страница категории</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__content-left">
+              <div class="header__left-blcoks">
+                <a href="" class="header-logo">
+                  <img src="access/img/logo-header.svg" alt="" />
+                </a>
+                <div class="header__block-tel">
+                  <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown(this)">
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
+                      <img
+                        src="access/img/chevron-small.svg"
+                        alt=""
+                        class="chevron-title"
+                      />
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="tel:+375296282009" class="footer__contact_link">
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
+                      <div class="dropdown__line">
+                        <div class="footer__links-adr">
+                          <img src="access/img/home-modern-pin-1.svg" alt="" />
+                          Офис-склад в Минске
+                        </div>
+                        <p>г. Минск, ул. Ваупшасова 22</p>
+                      </div>
+                      <div class="dropdown__line2">
+                        <div class="footer__links-adr">
+                          <img src="access/img/time-clock.svg" alt="" /> Время
+                          работы
+                        </div>
+                        <p><span>Пн-Пт:</span> с 9:00 до 18:00</p>
+                        <p><span>Сб-Вс:</span> По согласованию</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
+                </div>
+              </div>
+              <button class="burger__but" id="burger__but"></button>
+              <div class="header__content-ceo">
+                <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+              </div>
+            </div>
+            <div class="header__content-right">
+              <div class="header__search">
+                <button class="but__search">
+                  <img src="access/img/search-loap.svg" alt="" />
+                </button>
+                <input type="text" placeholder="Найти в каталоге" />
+                <button class="header__search-close">
+                  <img src="access/img/close.svg" alt="" />
+                </button>
+              </div>
+              <div class="header-right__btns">
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
+                <button class="btn btn__calcul">Рассчитать стоимость</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu" id="header__menu">
+            <div class="container">
+
+                <nav class="header__content">
+
+                <!-- ITEM WITH SUBMENU -->
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                        <span class="menu-title">Каталог</span>
+                        <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <!-- сюда потом вставишь ссылки -->
+                    <a href="#">Пункт</a>
+                    <a href="#">Пункт</a>
+                    </div>
+                </div>
+
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                    <span class="menu-title">Кровельные работы</span>
+                    <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <a href="#">Пункт</a>
+                    <a href="#">Пункт</a>
+                    </div>
+                </div>
+
+                <!-- SIMPLE LINKS -->
+                <a href="#" class="menu-link">Портфолио</a>
+                <a href="#" class="menu-link">О компании</a>
+                <a href="#" class="menu-link active">Отзывы</a>
+                <a href="#" class="menu-link">Оплата</a>
+                <a href="#" class="menu-link">Доставка и возврат</a>
+                <a href="#" class="menu-link">Контакты</a>
+                <a href="#" class="menu-link">Блог</a>
+
+                <!-- SOCIALS -->
+                <div class="menu-socials">
+                    <a href="#" aria-label="YouTube"></a>
+                    <a href="#" aria-label="Instagram"></a>
+                    <a href="#" aria-label="TikTok"></a>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="menu-bottom">
+                   <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
+                </div>
+
+                </nav>
+
+            </div>
+            </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle" class="link_active"
+                >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Материалы для кровли</a>
+                <a href="#">Материалы для фасада</a>
+                <a href="#">Заборы и ограждения</a>
+                <a href="#">Кровельные аксессуары</a>
+                <a href="#">Водосточные системы</a>
+                <a href="#">Услуги монтажа</a>
+              </div>
+            </li>
+            <li class="menu-dropdown">
+              <a class="menu-dropdown__toggle"
+                >Кровельные работы
+                <img src="access/img/chevron-small.svg" alt="icon" />
+              </a>
+              <div class="menu-dropdown__popup">
+                <a href="#">Монтаж кровли под ключ</a>
+                <a href="#">Реконструкция домов и дач</a>
+                <a href="#">Монтаж кровли из металлочерепицы</a>
+                <a href="#">Монтаж натуральной черепицы</a>
+                <a href="#">Монтаж фальцевой кровли</a>
+                <a href="#">Установка водосточной системы</a>
+                <a href="#">Установка мансардных окон</a>
+                <a href="#">Установка снегодержателей</a>
+              </div>
+            </li>
+            <a href="">Портфолио</a>
+            <a href="">О компании</a>
+            <a href="">Отзывы</a>
+            <a href="">Оплата</a>
+            <a href="">Доставка и возврат</a>
+            <a href="">Контакты</a>
+            <a href="">Блог</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="breadcrumb">
+        <div class="container">
+          <div class="breadcrumb__content">
+            <span><a href="" class="breadcrumb__link">Главная</a></span>
+            <span>/</span>
+            <span><a href="" class="breadcrumb__link">Каталог</a></span>
+            <span>/</span>
+            <span><a href="" class="breadcrumb__link">Модульная металлочерепица</a></span>
+            <span>/</span>
+            <span class="breadcrumb__end">Dahpol Egeria</span>
+          </div>
+        </div>
+      </div>
+      <section class="banner-product block__banner-work">
+        <div class="container">
+          <div class="banner__product-fon banner-work__content-top">
+            <div class="banner__product-fon_content">
+              <div class="banner__product-content_top">
+                <div class="banner__product-minitext">Модульная металлочерепица </div>
+                <h1>Dahpol Egeria</h1>
+              </div>
+              <div class="banner__product-content_bottom">
+                <div class="banner__product-line">
+                  <img src="access/img/Truck.svg" alt="">
+                  Доставка по всей Беларуси
+                </div>
+                <div class="banner__product-line">
+                  <img src="access/img/CheckSquare.svg" alt="">
+                  В наличии на складе
+                </div>
+              </div>
+            </div>
+             <div class="banner__circle">
+              <div class="banner__circle-block">
+                <img src="access/img/banner-img_tov.png" alt="">
+              </div>
+             </div>
+             <img src="access/img/tre.svg" alt="" class="zesel-img">
+          </div>
+        </div>
+      </section>
+
+      <section class="product__har">
+        <div class="container">
+          <div class="product__har-content">
+            <div class="har__content-left">
+              <div class="har__left-info">
+                <h2>Основные характеристики:</h2>
+                <div class="har__left-info_block">
+                  <div class="har__left-info_col">
+                   <span>Ширина листа:</span>
+                   <span>Длина листа:</span>
+                   <span>Ширина листа полезная:</span>
+                   <span>Длина листа полезная:</span>
+                   <span>Высота профиля:</span>
+                  </div>
+                  <div class="har__left-info_col">
+                    <span>1250 мм</span>
+                    <span>720 мм, 370 мм</span>
+                    <span>1120 мм</span>
+                    <span>700 мм, 350 мм</span>
+                    <span>30 мм</span>
+                  </div>
+                </div>
+              </div>
+              <div class="har_left-price">от <h2>37,03 BYN</h2> за панель</div>
+              <div class="har_left-otz">
+                <div class="har_left-otz_block">
+                  <div class="rew-stars">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="">
+                    <img src="access/img/Star2.svg" alt="" class="mask-star">
+                  </div>
+                  <span>4,8</span>
+                </div>
+                 <a href="" class="card__link"><img src="access/img/vector.svg" alt="" />Посмотреть отзывы</a>
+              </div>
+
+              <div class="header-right__btns">
+                <a href="" class="btn btn__calcul"><img src="access/img/shop-svg.svg" alt="" />Интернет-магазин</a >
+                <button class="btn btn__shop">Рассчитать стоимость</button>
+              </div>
+              
+            </div>
+            <div class="har__content-right">
+              <video src="" poster="access/img/image-about.png" class="video-about"></video>
+              <p>
+                Видеообзор модульной черепицы Dahpol Egeria
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="product__card js-tabs">
+        <div class="container">
+          <div class="product__card-content">
+            <div class="product__card-content_top">
+              <h2 class="main__top">Dahpol Egeria</h2>
+              <p>Dachpol Egeria(Дахпол Эгерия)- это гибридная модульная черепица имеющая абсолютную симметричность профиля, благодаря чему экономится количество кровельного материала на сложных кровлях т.к появляется возможность сдвигать модули, использовать остатки и разделять кровельную панель до 3-х частей.</p>
+            </div>
+            <div class="product__card-content_main">
+              <h4>Сравнение покрытий металлочерепицы</h4>
+              <div class="rew__top-btns">
+                <!-- Desktop buttons -->
+                <div class="tab-buttons">
+                  <button class="tab-button active" data-tab="root1">
+                    Granite UltraMatt
+                  </button>
+                  <button class="tab-button" data-tab="root2">
+                    Crown Mat BT SSAB
+                  </button>
+                  <button class="tab-button" data-tab="root3">
+                    Rought Matt SSAB 
+                  </button>
+                  <button class="tab-button" data-tab="root4">
+                    Pural Matt SSAB 
+                  </button>
+                </div>
+                <!-- Mobile select -->
+                <div class="custom-dropdown tab-select">
+                  <div class="dropdown-toggle">
+                    Granite UltraMatt
+                    <span class="dropdown-arrow"></span>
+                  </div>
+                  <ul class="dropdown-menu">
+                    <li data-value="root1" class="active">
+                      Granite UltraMatt
+                    </li>
+                    <li data-value="root2">Crown Mat BT SSAB</li>
+                    <li data-value="root3">Rought Matt SSAB</li>
+                    <li data-value="root4">Pural Matt SSAB</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="root1" class="tab-content active">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="root__content-top_left">
+                      <div class="root__top-left_line">
+                        <strong>Толщина метала:</strong> 0,45 - 0,5 мм
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Толщина покрытия:</strong> 20-22 мк
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Гарантия:</strong> до 20 лет
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Вид:</strong> модульная/листовая
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Содержание цинка:</strong> 100 - 140 г/м²
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Устойчивость к царапинам:</strong> standart
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Изготовитель металла:</strong> Беларусь, Россия
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="root2" class="tab-content">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="har__left-info_block">
+                      <div class="har__left-info_col">
+                      <span>Ширина листа:</span>
+                      <span>Длина листа:</span>
+                      <span>Ширина листа полезная:</span>
+                      <span>Длина листа полезная:</span>
+                      <span>Высота профиля:</span>
+                      </div>
+                      <div class="har__left-info_col">
+                        <span>1250 мм</span>
+                        <span>720 мм, 370 мм</span>
+                        <span>1120 мм</span>
+                        <span>700 мм, 350 мм</span>
+                        <span>30 мм</span>
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="root3" class="tab-content">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="root__content-top_left">
+                      <div class="root__top-left_line">
+                        <strong>Толщина метала:</strong> 0,45 - 0,5 мм
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Толщина покрытия:</strong> 20-22 мк
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Гарантия:</strong> до 20 лет
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Вид:</strong> модульная/листовая
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Содержание цинка:</strong> 100 - 140 г/м²
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Устойчивость к царапинам:</strong> standart
+                      </div>
+                      <div class="root__top-left_line">
+                        <strong>Изготовитель металла:</strong> Беларусь, Россия
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="root4" class="tab-content">
+                <div class="root__content">
+                  <div class="root__content-top">
+                    <div class="har__left-info_block">
+                      <div class="har__left-info_col">
+                      <span>Толщина метала:</span>
+                      <span>Толщина покрытия:</span>
+                      <span>Гарантия:</span>
+                      <span>Вид:</span>
+                      <span>Содержание цинка:</span>
+                      <span>Устойчивость к царапинам:</span>
+                      <span>Изготовитель металла:</span>
+                      </div>
+                      <div class="har__left-info_col">
+                        <span>0,45 - 0,5 мм</span>
+                        <span>20-22 мк</span>
+                        <span>до 20 лет</span>
+                        <span>модульная/листовая</span>
+                        <span>100 - 140 г/м²</span>
+                        <span>standart</span>
+                        <span>Беларусь, Россия</span>
+                      </div>
+                    </div>
+                    <img src="access/img/tov1.png" class="root__content-top_right">
+                  </div>
+                  <div class="root__content-bottom">
+                    <h4>Цветовые решения</h4>
+                    <div class="root__bottom-wrap">
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8015</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8016</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/tov2.png" alt="">
+                        <p>RAL8017</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                      <div class="root-item">
+                        <img src="access/img/root-im.png" alt="">
+                        <p>RAL9005</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </section>
+
+      <section class="banner__more feedback__image">
+        <div class="container">
+           <div class="feedback__content">
+              <div class="feedback__content-text">
+                <h2>Хотите узнать подробнее про покрытия?</h2>
+                <p>
+                 Переходите в наш блог, там много полезной информации о покрытиях, их преимуществах и отличиях
+                </p>
+                <a href="" class="btn btn__shop" >Читать про покрытия<span>⬈</span></a>
+                <img src="access/img/arr.svg" alt="" class="banner-arr" />
+              </div>
+              <img src="access/img/phone-image.png" alt="" class="phone-more">
+           </div>
+        </div>
+      </section>
+
+      <section class="product__advantages">
+        <div class="container">
+          <h2 class="main__top">Преимущества Dahpol Egeria  
+            <a href="" class="btn btn__shop desc-o">Купить в интернет-магазине<span>⬈</span></a>
+          </h2>
+          <div class="product__advantages-content">
+            <div class="white__circle"></div>
+            <img src="access/img/tovar1.png" alt="" class="advan-image">
+            <img src="access/img/vector7.svg" alt="" class="modal-v vector-line">
+            <div class="product__advantages-items">
+              <div class="product__advantages-item advan-1">
+                <img src="access/img/Vector1.svg" alt="" class="Vector">
+                <div class="advan__item-info">
+                  <h5>
+                     <div class="advan__image-block">
+                      <img src="access/img/adv1.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Качество</div></h5>
+                  <p>Dachpol Egeria производится из высококачественной стали трех проверенных производителей SSAB (Швеция) ArcelorMittal (Германия) Arvedi (Италия)</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-2">
+                <img src="access/img/Vector2.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv2.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Герметичность</div></h5>
+                  <p>Увеличенное боковое соединение панелей улучшает герметичность кровельного покрытия и позволяет производить монтаж на кровлях с более малым градусом уклона</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-3">
+                <img src="access/img/Vector3.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv3.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Гибридная модульная черепица</div></h5>
+                  <p>Максимальная экономия кровельного материала на вашей крыше. Большое количество размеров в наличии на складе. Полная симметричность</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-4">
+                <img src="access/img/Vector4.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv4.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Современный стиль +<br> прочность</div></h5>
+                  <p>Шесть волн высотой 30 мм с тремя ребрами на каждой придают индивидуальный вид кровле и дополнительную прочность при монтаже</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-5">
+                <img src="access/img/Vector5.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv5.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Защита от подделки</div></h5>
+                  <p>Компания дорожит своей репутацией именно поэтому все кровельные модули Эгерия имеют защитную лазерную маркировку. Что обеспечивает покупателю защиту от обмана</p>
+                </div>
+              </div>
+              <div class="product__advantages-item advan-6">
+                <img src="access/img/Vector6.svg" alt="" class="Vector">
+                
+                <div class="advan__item-info">
+                  <h5>
+                    <div class="advan__image-block">
+                      <img src="access/img/adv6.jpg" alt="" class="advan-block_ims">
+                    </div>
+                    <div class="w-title">Полная симметричность</div></h5>
+                  <p>Симметричность модулей особенность модульной черепицы Эгерия, благодаря этому появляется возможность сэкономить материал: сдвигая модули и используя обрезки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t" >Купить в интернет-магазине<span>⬈</span></a>
+        </div>
+      </section>
+
+      <section class="price-list roof-pad">
+        <div class="container">
+          <div class="price-list__content">
+            <div class="price-list__content-wrap">
+              <h2 class="price-list__title">Прайс-лист на материалы</h2>
+              <p>
+                Не тратьте время на долгие поиски.<br />
+                Скачайте прайс с описанием и актуальными ценами
+              </p>
+            </div>
+            <div class="price-form-wrapper">
+              <form
+                class="price-form"
+                action="#"
+                method="POST"
+                autocomplete="off"
+                novalidate=""
+              >
+                <h3 class="price-form__title">Куда отправить прайс-лист?</h3>
+
+                <div class="price-form__radios">
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="telegram"
+                      required=""
+                      checked=""
+                    />
+                    <span>Telegram</span>
+                  </label>
+
+                  <label class="radio">
+                    <input
+                      type="radio"
+                      name="send_to"
+                      value="viber"
+                      required=""
+                    />
+                    <span>Viber</span>
+                  </label>
+
+                </div>
+
+                <label class="price-form__label" for="phone"
+                  >Введите номер телефона</label
+                >
+
+                <input
+                  class="price-form__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Номер телефона"
+                  pattern="^[0-9+\-\s()]{6,20}$"
+                  required=""
+                />
+                <label class="form-control contact-form__checkbox">
+                  <input type="checkbox" name="agree" checked required />
+                  <span
+                    >Я соглашаюсь с
+                    <a href="">условиями обработки персональных данных</a></span
+                  >
+                </label>
+
+                <button class="btn btn__calcul" type="submit">
+                  Получить прайс
+                </button>
+
+                <div class="price-form__update">Прайс обновлен 20.04.2025</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-project">
+        <div class="container">
+          <h2 class="main__top">
+            Реализованные проекты Dachpol Egeria
+            <a href="" class="btn btn__shop desc-o">Посмотреть все портфолио <span>⬈</span></a>
+          </h2>
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper vacancy__content-items">
+              <div class="swiper-slide vacancy__content-item">
+                <li class="project-list__item is-visible">
+                  <a>
+                    <article
+                      class="project-card"
+                      data-images="
+                                        access/img/image-card-portfolio.webp,
+                                        access/img/card-img1.webp,
+                                        access/img/card-img2.webp,
+                                        access/img/card-img3.webp,
+                                        access/img/card-img4.webp,
+                                        access/img/card-img5.webp,
+                                    "
+                    >
+                      <div class="project-card__left">
+                        <div class="project-card__badges">
+                          <span class="project-badge">
+                            <img
+                              src="access/img/icon-scad.svg"
+                              alt="icon"
+                            />2025 г.
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-time.svg" alt="icon" /> 14
+                            дней
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-house.svg" alt="icon" />
+                            360.00 м²
+                          </span>
+                        </div>
+
+                        <h3 class="project-card__title">
+                          Монтаж круглой кровли в г.п.Мачулищи
+                        </h3>
+
+                        <ul class="project-card__list">
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <br>
+                          <li>
+                            - Зонты на дымоход по индивидуальному заказу моульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="project-card__right">
+                        <img
+                          class="project-card__img"
+                          src="access/img/proj1.png"
+                          alt="Проект"
+                        />
+
+                        <div
+                          class="project-card__view"
+                          href="#"
+                          aria-label="Смотреть проект"
+                        >
+                          <img src="access/img/icon-eye.svg" alt="view" />
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide vacancy__content-item">
+                <li class="project-list__item is-visible">
+                  <a>
+                    <article
+                      class="project-card"
+                      data-images="
+                                        access/img/proj-2.png,
+                                        access/img/card-img1.webp,
+                                        access/img/card-img2.webp,
+                                        access/img/card-img3.webp,
+                                        access/img/card-img4.webp,
+                                        access/img/card-img5.webp,
+                                    "
+                    >
+                      <div class="project-card__left">
+                        <div class="project-card__badges">
+                          <span class="project-badge">
+                            <img
+                              src="access/img/icon-scad.svg"
+                              alt="icon"
+                            />2025 г.
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-time.svg" alt="icon" /> 14
+                            дней
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-house.svg" alt="icon" />
+                            360.00 м²
+                          </span>
+                        </div>
+
+                        <h4 class="project-card__title">
+                          Монтаж кровли и отделка фасада в Минске
+                        </h4>
+
+                        <ul class="project-card__list">
+                          Ух и необычный дом для наших широт нам довеловь делать. Проект конечно необычный и очень интересный, стены дома возведены из газосиликатного блока. Нами же выполнялась вся фасадная отделка металлическим сайдингом с утеплением.
+                        </ul>
+                      </div>
+
+                      <div class="project-card__right">
+                        <img
+                          class="project-card__img" style="object-position: left;"
+                          src="access/img/proj-2.png"
+                          alt="Проект"
+                        />
+
+                        <div
+                          class="project-card__view"
+                          href="#"
+                          aria-label="Смотреть проект"
+                        >
+                          <img src="access/img/icon-eye.svg" alt="view" />
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </div>
+              <div class="swiper-slide vacancy__content-item">
+                <li class="project-list__item is-visible">
+                  <a>
+                    <article
+                      class="project-card"
+                      data-images="
+                                        access/img/image-card-portfolio.webp,
+                                        access/img/card-img1.webp,
+                                        access/img/card-img2.webp,
+                                        access/img/card-img3.webp,
+                                        access/img/card-img4.webp,
+                                        access/img/card-img5.webp,
+                                    "
+                    >
+                      <div class="project-card__left">
+                        <div class="project-card__badges">
+                          <span class="project-badge">
+                            <img
+                              src="access/img/icon-scad.svg"
+                              alt="icon"
+                            />2025 г.
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-time.svg" alt="icon" /> 14
+                            дней
+                          </span>
+                          <span class="project-badge">
+                            <img src="access/img/icon-house.svg" alt="icon" />
+                            360.00 м²
+                          </span>
+                        </div>
+
+                        <h4 class="project-card__title">
+                          Монтаж круглой кровли в г.п.Мачулищи
+                        </h4>
+
+                        <ul class="project-card__list">
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <br>
+                          <li>
+                            - Зонты на дымоход по индивидуальному заказу моульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <br>
+                          <li>
+                            - Зонты на дымоход по индивидуальному заказу
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица Blachotrapez Germania
+                            Mat PLUS 9005
+                          </li>
+                          <br>
+                          <li>
+                            - Модульная металлочерепица DachPol PuralMAT RR33
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="project-card__right">
+                        <img
+                          class="project-card__img"
+                          src="access/img/proj1.png"
+                          alt="Проект"
+                        />
+
+                        <div
+                          class="project-card__view"
+                          href="#"
+                          aria-label="Смотреть проект"
+                        >
+                          <img src="access/img/icon-eye.svg" alt="view" />
+                        </div>
+                      </div>
+                    </article>
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div class="vacan-swiper_btns">
+              <div
+                class="vacan__swiper--button swiper-button-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-back.svg" alt="" />
+              </div>
+              <div
+                class="vacan__swiper--button swiper-button-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+                aria-controls="swiper-wrapper-2ac16fa82ccc5bf10"
+              >
+                <img src="access/img/arrows-next.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <a href="" class="btn btn__shop modal-v mar-t"
+            >Посмотреть все портфолио <span>⬈</span></a
+          >
+        </div>
+      </section>
+      <section class="main-reviews block-reviews">
+        <div class="container">
+          <h2 class="main__top">
+            Отзывы на металлочерепицу Dahpol Egeria
+            <a href="#feedback" class="btn feedback-btn desc-o"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
+          </h2>
+            <div class="swiper vacan-swiper">
+            <div class="swiper-wrapper vacancy__content-items s-block">
+             
+              <div class="swiper-slide">
+               <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide ">
+               <div class="rew__content-item">
+                    <img src="access/img/img-item.jpg" alt="blog-prom" class="blog-prom"/>
+                    <div class="blog__item-content">
+                      <div class="blog__item-top">
+                        <div class="blog-data">24.10.2023
+                            <div class="rew-stars">
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                                <img src="access/img/star.svg" alt="" />
+                            </div>
+                        </div>
+                        <h4 class="blog__item-title">Наталья Пупкина</h4>
+                            <p class="blog__item-text">Спасибо РУФЛЭНД за нашу красивую кровлю! Вы крутая КОМАНДА ПРОФЕССИОНАЛОВ! Ребята работали несмотря на сложные погодные условия. Цена не изменилась, хотя оговаривали её ещё в начале октября. Остаток металлочерепицы забрали и сделали перерасчёт. Приятно иметь дело с ответственными и честными людьми!</p>
+                      </div>
+                      <a href class="card__link">Отзыв на Google.Картах</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+            <div class="rew__btns-modal mar-t">
+              <button class="btn btn__calcul modal-v">Показать больше</button>
+              <a href="#feedback" class="btn feedback-btn modal-v"><img src="access/img/vector.svg" alt="" />Оставить отзыв</a>
+            </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer__form">
+            <a href="" class="header-logo">
+              <img src="access/img/logo-header.svg" alt="" />
+            </a>
+            <div class="footer__form-tests">
+              <h5>Остались вопросы?</h5>
+              <p>
+                Оставьте свои контактные данные и мы свяжемся с вами в ближайшее
+                время
+              </p>
+            </div>
+            <form action="" method="post" class="footer__form-content">
+              <input
+                type="tel"
+                class="input-line"
+                id="phone"
+                required
+                placeholder="+375 (__) ___-__-__"
+              />
+              <div class="form__checkbox-text form-control">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__input-checkbox"
+                  id="fluency"
+                  checked
+                  required
+                />
+                <p>
+                  Я соглашаюсь с
+                  <a href="">условиями обработки персональных данных</a>
+                </p>
+              </div>
+              <div class="form__btn-text">
+                <button type="submit" class="btn btn__calcul">Отправить</button>
+                <p>
+                  Ваши контакты используются исключительно для связи с Вами и не
+                  будут переданы третьим лицам
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="footer__content-info">
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Страницы
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Каталог</a>
+                <a href="">Интернет-магазин</a>
+                <a href="">Кровельные работы</a>
+                <a href="">Портфолио</a>
+                <a href="">О компании</a>
+                <a href="">Отзывы</a>
+                <a href="">Клиенту</a>
+                <a href="">Контакты</a>
+                <a href="">Блог</a>
+              </div>
+            </div>
+            <div class="footer__info-col footer-accordion active">
+              <h5 class="footer__row-title">
+                Каталог
+                <img
+                  src="access/img/chevron-small.svg"
+                  alt=""
+                  class="chevron-title"
+                />
+              </h5>
+              <div class="footer__row-links">
+                <a href="">Материалы для кровли</a>
+                <a href="">Материалы для фасада</a>
+                <a href="">Заборы и ограждения</a>
+                <a href="">Кровельные аксессуары</a>
+                <a href="">Водосточные системы</a>
+                <a href="">Услуги монтажа</a>
+              </div>
+            </div>
+
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Контакты</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Офис-склад в Минске</div>
+                <a href="" class="footer-adr__link"
+                  >г.Минск ул. Ваупшасова 22</a
+                >
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Соцсети</div>
+                <div class="header__content-ceo">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/telegram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/viber.svg" alt="" /></a>
+                  <a href=""><img src="access/img/whatsapp.svg" alt="" /></a>
+                </div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Контакты для связи</div>
+                <div class="footer__row-ceo">
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a href="tel:+375296282009" class="footer__contact_link">
+                    <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                    09</a
+                  >
+                  <a
+                    href="mailto:zakaz@roofland.by"
+                    class="footer__contact_link"
+                  >
+                    <img
+                      src="access/img/mail-email.svg"
+                      alt=""
+                    />zakaz@roofland.by</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__info-col">
+              <h5 class="footer__row-title">Время работы</h5>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Пн-пт:</div>
+                <div class="footer__subtitle">С 9:00 до 18:00</div>
+              </div>
+              <div class="footer__row-links">
+                <div class="footer__links-adr">Сб-вс:</div>
+                <div class="footer__subtitle">По согласованию</div>
+              </div>
+              <div class="footer__row-doc">
+                <p>УНП: 691776269</p>
+                <p>
+                  Номер в Торговом реестре/Реестре бытовых услуг/Регистре
+                  производителей товаров: 691776269
+                </p>
+                <a href="">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="project-modal" id="projectModal">
+      <div class="project-modal__overlay"></div>
+
+      <div class="project-modal__content roof-pad">
+        <button class="project-modal__close" aria-label="Закрыть">
+          <img src="access/img/close-modal.svg" alt="" />
+        </button>
+
+        <div class="project-modal__slider">
+          <div class="swiper" id="projectSwiper">
+            <div class="swiper-wrapper" id="projectSwiperWrapper"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="project-modal__info" id="projectModalInfo"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/index.js"></script>
+  </body>
+</html>
