@@ -271,7 +271,7 @@ header.scrolled {
   border-bottom: 1px solid var(--border-block);
 }
 
-.header__menu {
+/* .header__menu {
   display: none;
   background-color: var(--white-color);
   height: 0px;
@@ -289,8 +289,27 @@ header.scrolled {
   left: 0;
   padding: 1rem;
   top: 3.5rem;
+} */
+.header__menu {
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 3.5rem);
+  background-color: var(--white-color);
+
+  transform: translateY(calc(-100% - 3.5rem));
+  transition: transform 0.4s ease;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  z-index: 1000;
 }
 
+.header__menu__active {
+  transform: translateY(0);
+}
 .link_active {
   color: var(--blue);
 }
@@ -304,6 +323,13 @@ header.scrolled {
 }
 .header__bottom a:hover {
   color: var(--blue);
+}
+.menu-bottom {
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  border: 1px solid var(--border-drop);
+  background: var(--white-color);
 }
 
 .btn {
@@ -383,8 +409,43 @@ header.scrolled {
   width: 1.5rem;
   height: 1.5rem;
 }
-
+.submenu {
+  display: none;
+}
 @media (max-width: 48em) {
+  .submenu {
+    display: grid;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding: 0 1rem;
+    gap: 1.25rem;
+  }
+  .submenu a {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .menu-item.open .submenu {
+    max-height: 500px; /* достаточно большое */
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+  .menu-link:last-child {
+    border-bottom: none;
+  }
+  .menu-item,
+  .menu-link {
+    border-bottom: 1px solid #7272723d;
+  }
+
+  .menu-item.open:last-child .submenu {
+    border-bottom: none;
+  }
+  /* опционально — поворот стрелки */
+  .menu-item.open .menu-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
   .header__top {
     padding: 1rem;
     width: 100%;
@@ -4366,6 +4427,10 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
     object-fit: cover;
   }
 }
+.but__main__active,
+.actions__link {
+  display: none;
+}
 @media (max-width: 48em) {
   .header__menu {
     background: #fff;
@@ -4384,61 +4449,84 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
     width: 100%;
     padding: 14px 16px;
     background: none;
-    border: none;
     text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 0;
   }
-
-  /* активная ссылка */
-  .menu-link.active {
-    color: #4f6fff;
+  .menu-link img,
+  .menu-item img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .menu-left {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
   }
 
   /* иконка справа */
   .menu-icon {
-    width: 10px;
-    height: 10px;
-    border-right: 2px solid #999;
-    border-bottom: 2px solid #999;
+    width: 0.338rem;
+    height: 0.338rem;
+    border-right: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
     transform: rotate(45deg);
     transition: 0.3s;
   }
 
-  /* подменю */
-  .submenu {
+  .header__search {
     display: none;
-    padding-left: 16px;
   }
-
-  /* раскрытие */
-  .menu-item.active .submenu {
-    display: block;
-  }
-
   .menu-item.active .menu-icon {
     transform: rotate(-135deg);
+  }
+  .but__main__active,
+  .actions__link {
+    display: flex;
   }
 
   /* соцсети */
   .menu-socials {
     display: flex;
-    gap: 12px;
-    padding: 16px;
+    gap: 0.75rem;
+    padding: 1rem;
   }
 
   /* нижняя кнопка */
   .menu-bottom {
-    padding: 16px;
+    padding: 1rem;
+    z-index: 10;
   }
 
   .menu-button {
     display: block;
     text-align: center;
-    padding: 12px;
-    border-radius: 12px;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
     background: #eef1ff;
+  }
+  .header__menu__active .container {
+    display: grid;
+    align-content: space-between;
+    height: 100%;
+  }
+  .menu-toggle img,
+  .menu-link img {
+    filter: invert(100%) brightness(0%);
+  }
+  .menu-toggle.action img,
+  .menu-link.action img {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(83%) saturate(3467%)
+      hue-rotate(225deg) brightness(92%) contrast(101%);
+  }
+  .menu-toggle.action .menu-title,
+  .menu-link.action {
+    color: var(--blue);
+  }
+  .submenu.active{
+    color: var(--blue);
   }
 }
 
@@ -4924,7 +5012,7 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
     display: grid;
     gap: 2.5rem;
     width: 100% !important;
-    padding: 7.625rem 0.938rem 2.938rem 3rem;
+    padding: 1.625rem 0.938rem 2.938rem 3rem;
   }
   .product__advantages-content {
     padding: 1rem 1rem 6rem 1rem;
@@ -4968,11 +5056,11 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
   }
   .vector-line {
     z-index: 1;
-    height: 85.813rem;
-    width: 21.438rem;
+    height: 84.813rem;
+    width: 20.438rem;
     position: absolute;
     top: 7rem;
-    left: -6rem;
+    left: -5.5rem;
   }
   .product__advantages .btn__shop {
     margin-left: 1rem;
@@ -5007,24 +5095,6 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
     transform: translateX(-50%);
   }
 
-  /* кружок сверху */
-  .vector-line::before {
-    top: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  /* кружок снизу */
-  .vector-line::after {
-    bottom: 0;
-    transform: translate(-50%, 50%);
-  }
-  .vector-line::before {
-    top: 0;
-  }
-  .vector-line::after {
-    bottom: 0;
-  }
-
   .advan__item-info::after {
     content: "";
     position: absolute;
@@ -5036,7 +5106,7 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
     height: 0.075rem;
     z-index: 1;
   }
-  .advan-1 .advan__item-info::after{
+  .advan-1 .advan__item-info::after {
     left: -5%;
   }
 }
@@ -5165,15 +5235,84 @@ ul:not(.dropdown-menu, .pagination, .banner__content-main, .project-card__list)
 .block-reviews .rew__content-item {
   width: 100%;
 }
-@media (max-width:48em) {
-  .main-reviews .vacan-swiper .swiper-slide{ 
+@media (max-width: 48em) {
+  .main-reviews .vacan-swiper .swiper-slide {
     width: 100% !important;
   }
- .main-reviews .rew__btns-modal{
-  gap: 1rem;
+  .main-reviews .rew__btns-modal {
+    gap: 1rem;
   }
   .btn__calcul,
-.btn-more{
-  padding: 1rem 1.5rem;
+  .btn-more {
+    padding: 1rem 1.5rem;
+  }
+  .vector-ground {
+    display: flex;
+    width: 0.938rem;
+    height: 0.938rem;
+    top: -6.912rem;
+    left: 6.688rem;
+    position: relative;
+    z-index: 2;
+  }
+  .vector-ground2 {
+    display: flex;
+    width: 0.938rem;
+    height: 0.938rem;
+    top: 77.088rem;
+    left: -0.06rem;
+    position: relative;
+    z-index: 2;
+  }
+  .product__advantages-content {
+    padding: 1rem 1rem 5rem 1rem;
+  }
+  #header__menu .header__content {
+    gap: 0;
+  }
+  #header__menu .menu-link,
+  .menu-toggle {
+    padding: 0.875rem 1rem;
+  }
+  .header__menu__active {
+    padding: 0;
+    overflow-y: scroll;
+  }
+  .menu-socials img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .actions__link {
+    gap: 0.5rem;
+  }
+  .actions__link a img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .btn__calcul img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }
+header .btn__calcul,
+header .btn__shop {
+  padding: 0.75rem 1.5rem;
+}
+
+.mobal_btn {
+  display: none;
+}
+@media (max-width: 48em) {
+  .header__content-right .btn__calcul,
+  .header__content-right .btn__shop {
+    padding: 0.489rem 0.756rem;
+    font-size: 0.875rem;
+    gap: 0.625rem;
+  }
+  .header__content-right {
+    justify-content: space-between;
+  }
+  .mobal_btn {
+    display: flex;
+  }
 }

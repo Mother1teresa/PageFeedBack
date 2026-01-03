@@ -24,15 +24,19 @@
                 <div class="header__block-tel">
                   <div class="dropdown">
                     <button class="dropbtn" onclick="toggleDropdown(this)">
-                      <img src="access/img/phones.svg" alt="" />+375 29 628 20 09
+                      <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                      09
                       <img
                         src="access/img/chevron-small.svg"
                         alt=""
-                        class="chevron-title"/>
+                        class="chevron-title"
+                      />
                     </button>
                     <div class="dropdown-content">
                       <a href="tel:+375296282009" class="footer__contact_link">
-                        <img src="access/img/phones.svg" alt="" />+375 29 628 20 09</a>
+                        <img src="access/img/phones.svg" alt="" />+375 29 628 20
+                        09</a
+                      >
                       <div class="dropdown__line">
                         <div class="footer__links-adr">
                           <img src="access/img/home-modern-pin-1.svg" alt="" />
@@ -50,7 +54,9 @@
                       </div>
                     </div>
                   </div>
-                  <a href="tel:+375296282009" class="call-order">Заказать звонок</a>
+                  <a href="tel:+375296282009" class="call-order"
+                    >Заказать звонок</a
+                  >
                 </div>
               </div>
               <button class="burger__but" id="burger__but"></button>
@@ -61,6 +67,21 @@
               </div>
             </div>
             <div class="header__content-right">
+              <div class="actions__link">
+                <a href="#">
+                  <img src="access/img/viber-logo.svg" class="img" alt="viber">
+                </a>
+                <a href="#">
+                  <img src="access/img/telegram-logo.svg" class="img" alt="telegram">
+                </a>
+                <a href="#">
+                  <img src="access/img/whatsapp.svg" class="img" alt="whatsapp">
+                </a>
+              </div>
+              <button class="btn btn__calcul mobal_btn">
+                <img src="access/img/calculator.svg" alt="icon">
+                Рассчитать стоимость
+              </button>
               <div class="header__search">
                 <button class="but__search">
                   <img src="access/img/search-loap.svg" alt="" />
@@ -71,33 +92,141 @@
                 </button>
               </div>
               <div class="header-right__btns">
-                <a href="" class="btn btn__shop">Интернет-каталог <span>⬈</span></a>
+                <a href="" class="btn btn__shop"
+                  >Интернет-магазин <span>⬈</span></a
+                >
                 <button class="btn btn__calcul">Рассчитать стоимость</button>
               </div>
             </div>
           </div>
         </div>
         <div class="header__menu" id="header__menu">
-          <div class="container">
-            <div class="header__content">
-              <a href="">Каталог</a>
-              <a href="">Кровельные работы</a>
-              <a href="">Портфолио</a>
-              <a href="">О компании</a>
-              <a href="" class="link_active">Отзывы</a>
-              <a href="">Оплата</a>
-              <a href="">Доставка и возврат</a>
-              <a href="">Контакты</a>
-              <a href="">Блог</a>
+            <div class="container">
+
+                <nav class="header__content">
+
+                <!-- ITEM WITH SUBMENU -->
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                      <span class="menu-left">
+                        <img src="access/img/catalog.svg" alt="">
+                        <span class="menu-title">Каталог</span>
+                      </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <!-- сюда потом вставишь ссылки -->
+                      <a href="#" class="">Материалы для кровли</a>
+                      <a href="#" class="">Материалы для фасада</a>
+                      <a href="" class="">Заборы и ограждения</a> 
+                      <a href="" class="">Кровельные аксессуары</a> 
+                      <a href="" class="">Водосточные системы</a>  
+                      <a href="" class="">Услуги монтажа</a>  
+                    </div>
+                </div>
+
+                <div class="menu-item has-children">
+                    <button class="menu-toggle">
+                        <span class="menu-left">
+                          <img src="access/img/hammer-screwdriver.svg" alt="">
+                          <span class="menu-title">Кровельные работы</span>
+                        </span>
+                      <span class="menu-icon"></span>
+                    </button>
+
+                    <div class="submenu">
+                    <a href="#">Монтаж кровли под ключ</a>
+                    <a href="#">Реконструкция домов и дач</a>
+                    <a href="">Монтаж кровли из металлочерепицы</a>  
+                    <a href="">Монтаж натуральной черепицы</a>  
+                    <a href="">Монтаж фальцевой кровли</a>  
+                    <a href="">Установка водосточной системы</a>  
+                    <a href="">Установка мансардных окон</a>  
+                    <a href="">Установка снегодержателей</a>  
+                    </div>
+                </div>
+
+                <!-- SIMPLE LINKS -->
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/picture-image.svg" alt="">
+                    </span>
+                    <span class="menu-title">Портфолио</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/work-job-pin-location-suitcase.svg" alt="">
+                    </span>
+                    <span class="menu-title">О компании</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/rew-icon.svg" alt="">
+                    </span>
+                    <span class="menu-title">Отзывы</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/money-coins.1-w.svg" alt="">
+                    </span>
+                    <span class="menu-title">Оплата</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/dosvtvozl.svg" alt="">
+                    </span>
+                    <span class="menu-title">Доставка и возврат</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/cont.svg" alt="">
+                    </span>
+                    <span class="menu-title">Контакты</span>
+                  </span>
+                </a>
+                <a href="#" class="menu-link">
+                  <span class="menu-left">
+                    <span class="menu-icon-left">
+                      <img src="access/img/bookmark-favorite.svg" alt="">
+                    </span>
+                    <span class="menu-title">Блог</span>
+                  </span>
+                </a>
+
+                <!-- SOCIALS -->
+                <div class="menu-socials">
+                  <a href=""><img src="access/img/youtube.svg" alt="" /></a>
+                  <a href=""><img src="access/img/instagram.svg" alt="" /></a>
+                  <a href=""><img src="access/img/tik_tok.svg" alt="" /></a>
+                </div>
+              </nav>
+                <!-- BUTTON -->
+                <div class="menu-bottom">
+                   <a href="" class="btn btn__shop">Интернет-магазин <span>⬈</span></a>
+                </div>
+
+                
+
             </div>
-          </div>
-        </div>
+            </div>
       </div>
       <div class="header__bottom">
         <div class="container">
           <div class="header__content">
             <li class="menu-dropdown">
-              <a class="menu-dropdown__toggle"
+              <a class="menu-dropdown__toggle" class="link_active"
                 >Каталог <img src="access/img/chevron-small.svg" alt="icon" />
               </a>
               <div class="menu-dropdown__popup">
@@ -127,7 +256,7 @@
             </li>
             <a href="">Портфолио</a>
             <a href="">О компании</a>
-            <a href="">Отзывы</a>
+            <a href=""class="">Отзывы</a>
             <a href="">Оплата</a>
             <a href="">Доставка и возврат</a>
             <a href="">Контакты</a>

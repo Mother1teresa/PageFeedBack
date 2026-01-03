@@ -659,3 +659,24 @@ function initTabs(container) {
 
   if (initialTab) showTab(initialTab);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".menu-item.has-children");
+
+  items.forEach(item => {
+    const toggle = item.querySelector(".menu-toggle");
+    const submenu = item.querySelector(".submenu");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      if (isOpen) {
+        item.classList.remove("open");
+        submenu.style.maxHeight = null;
+      } else {
+        item.classList.add("open");
+        submenu.style.maxHeight = submenu.scrollHeight + "px";
+      }
+    });
+  });
+});
